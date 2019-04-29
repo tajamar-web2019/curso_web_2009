@@ -6,3 +6,19 @@ strong {
     font-weight: normal;
     /* display: block; */
 }
+
+/* 
+ES UNA MALA PRACTICA USAR LOS ID EN CSS 
+#p001 {
+    color: blue;
+} */
+
+.destacado {
+    color: brown;  
+}
+
+.centrado {
+    text-align: center
+}
+
+
