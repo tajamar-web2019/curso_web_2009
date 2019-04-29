@@ -1,0 +1,24 @@
+.main_header {
+    background-color: brown;
+    color: bisque;
+    padding: 0.8rem 0rem 0.5rem 1rem
+}
+
+.main_header p {
+    font-size: 1.33rem;
+    font-weight: bold;
+    margin-top: -1rem;
+}
+
+.main_footer {
+    background-color: brown;
+    color: bisque; 
+    text-align: center;
+    padding: 1rem;
+}
+
+.h4 {
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    font-weight: bold;
+}
