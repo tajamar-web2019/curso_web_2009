@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elementos de la Web</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="main_header">
+        <h1>Etiquetas de HTML</h1>
+        <p>Clasificación de las etiquetas según el estándar HTML 5.2</p>
+    </header>
+    <div class="content_wrapper">
+        <p>El estandár diferencia inicialmente tres tipos diferentes de etiquetas: <span lang="en">Sections, Grouping content & Text-level semantics</span> </p>
+        <section id="sections_elements">
+            <header>
+                <h2 lang="en">Sections Elements</h2> 
+            </header>
+            <p>Esto trata de elementos de seccionado, que son los que se reflejan en el <strong>esquema</strong> (outline) de la página</p>
+            <p>Inicialmete estos elemntos incluian body y los encabezados (h1-h6)</p>
+            <p>En HTML% se añaaden los nuevos elementos semanticos: section, header, footer, nav, article y aside</p>
+            <section id="section">
+                <h3>Etiqueta section</h3>
+                <p>El elemento de HTML section (&lt;section&gt;) representa una sección genérica de un documento. Sirve para determinar qué contenido corresponde a qué parte de un <strong>esquema</strong>. Piensa en el esquema como en el índice de contenido de un libro; un tema común y subsecciones relacionadas. Es, por lo tanto, una etiquéta semántica.</p>
+                <p>Su funcionalidad principal es estructurar semánticamente un documento a la hora de ser representado por parte de un agente usuario. Por ejemplo, un agente de usuario que represente el documento en voz, podría exponer al usuario el índice de contenido por niveles para navegar rápidamente por las distintas partes.</p>                
+            </section>
+            <section id="header">
+                <h3>Etiqueta header</h3>
+                <p>El elemento de HTML Header (&lt;header&gt;) representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, pero también otros elementos como un logo, una sección que aglutine secciones de encabezados, una formulario de búsqueda o cosas parecidas.</p> 
+            </section>
+            <section id="footer">
+                <h3>Etiqueta footer</h3>
+                <p>El Elemento HTML Footer (&lt;footer&gt;) representa un pie de página para el contenido de sección más cercano o el elemento raíz de sección (p.e, su ancestro mas cercano article, aside, nav, section, blockquote, body, details, fieldset, figure, td).</p>
+                <p>Un pie de página típicamente contiene información acerca de el autor de la sección, datos de derechos de autor o enlaces a documentos relacionados.</p>
+            </section>
+            <section id="nav">
+                <h3>Etiqueta nav</h3>
+                <p>El elemento HTML &lt;nav&gt; representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.</p>
+            </section>
+            <section id="article">
+                <h3>Etiqueta article</h3>
+                <p>El Elemento article de HTML (&lt;article&gt;) representa una composición auto-contenida en un documento, página, una aplicación o en el sitio, que se destina a distribuir de forma independiente o reutilizable, por ejemplo, en la sindicación. Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento independiente del contenido</p>
+            </section>
+            <section id="aside">
+                <h3>Etiqueta Aside</h3>
+                <p>El Elemento HTML Aside (&lt;aside&gt;) representa una sección de una página que consiste en contenido que está <em>tangencialmente relacionado</em> con el contenido que le rodea, que podría ser considerado independiente de ese contenido. Estas secciones son a menudo representadas como barras laterales o como inserciones y contienen una explicación al margen como una definición de glosario, elementos relacionados indirectamente, como publicidad, la biografía del autor, o en aplicaciones web, la información de perfil o enlaces a blogs relacionados.</p>
+            </section>
+            <figure class="image_wrapper">
+                <!-- <img src="https://almosthumor.files.wordpress.com/2011/09/html5demo1.jpg" alt="Esquema de los elementos semanticos de HTML">  -->   
+                <!-- NUNCA JAMAS <img src="http://localhost:8080/06_elementos/assets/html5demo1.jpg" alt="Esquema de los elementos semanticos de HTML"> --> 
+                <img src="assets/html5demo1.jpg" alt="Esquema de los elementos semanticos de HTML">
+                <figcaption>
+                    Esquema de los elementos semanticos de HTML
+                    <footer>Tomado de <a href="https://codepen.io/mi-lee/post/an-overview-of-html5-semantics">CodePen</a></footer>
+                </figcaption>
+            </figure>
+        </section>
+        <section id="grouping">
+            <header>
+                <h2>Grouping content</h2>
+            </header>
+        </section>
+        <section id="text-level">
+            <header>
+                <h2>Text-level semantics</h2>
+            </header>
+        </section>        
+    </div>
+    <footer class="main_footer">
+        <p>Alejandro Cerezo - &copy; Tajamar</p>
+        <a href="mailto://alce65@hotmail.es">Enviar correo</a>
+    </footer>
+</body>
+</html>
