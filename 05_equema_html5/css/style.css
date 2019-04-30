@@ -22,3 +22,11 @@
     margin-block-end: 1.33em;
     font-weight: bold;
 }
+
+.section_header {
+    border: 1px solid brown;
+}
+
+.section_footer {
+    border-top: 1px solid grey
+}
