@@ -1,0 +1,27 @@
+{
+  "name": "curso_web_2009",
+  "version": "1.0.0",
+  "description": "Ejercicios del curso de páginas Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alce65/curso_web_2009.git"
+  },
+  "keywords": [
+    "HTML5",
+    "Web",
+    "CSS3"
+  ],
+  "author": "Alejandro Cerezo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alce65/curso_web_2009/issues"
+  },
+  "homepage": "https://github.com/alce65/curso_web_2009#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
