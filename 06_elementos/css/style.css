@@ -34,3 +34,45 @@ body {
 img {
    max-width: 100%;
 }
+
+.pre_no_mono {
+    font-family: inherit;
+}
+
+blockquote {
+    /* margin-inline-start: 0;
+    margin-inline-end: 0; */
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    border-left: 4px solid lightgrey;
+    /* font-style: italic; */
+}
+
+blockquote footer {
+    width: fit-content;
+    margin-top: 0.5rem;
+    padding-top: 0.3rem;
+    border-top: 1px solid gray;
+}
+/* ul {
+    list-style-type: decimal;
+}
+
+ol {
+    list-style-type: disc
+} */
+
+.dt {
+    float: left;
+    clear: left;
+}
+
+.dd {
+   float: left;
+   clear: right;
+}
+
+.clearfix {
+    clear: both;
+}
