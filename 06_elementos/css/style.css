@@ -5,13 +5,35 @@ body {
 .main_header {
     background-color: brown;
     color: bisque;
-    padding: 0.8rem 0rem 0.5rem 1rem 
+    padding: 0.8rem 0rem 0.5rem 2rem 
 }
 
 .main_header p {
     font-size: 1.33rem;
     font-weight: bold;
     margin-top: -1rem;
+    margin-bottom: 0;
+}
+
+.main_header nav {
+    margin-left: -1rem
+}
+
+.main_header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main_header nav li {
+    display: inline-block;
+}
+.main_header nav a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+
 }
 
 .main_footer {
