@@ -53,7 +53,11 @@
                         <img src="./assets/varanococodrilo1.png" alt="Varano cocodrilo">
                         <img src="./assets/ardilla.gif" alt="Ardilla">
                         <img srcset="./assets/3boats.webp"
-                            src="./assets/3boats.jpg" alt="Barcas"> 
+                            src="./assets/3boats.jpg" alt="Barcas">
+                         <img src="./assets/005.gif" alt="Gif animado abstracto">    
+                        <img src="./assets/WoodElf.png" alt="Elfo">
+                        <img srcset="./assets/logo.svg"
+                        src="./assets/logo.gif" alt="Logotipo">
                     </div>
                     <div class="clearfix"></div>    
                     <p>Uso de imágenes responsivas en HTML</p>
@@ -78,13 +82,48 @@
                         <img src="./assets/iguana.600.jpg" alt="Iguana en un tronco">                        
                     </picture>
                     <p>La etiqueta picture y los formatos alternativos de imágenes</p>
+                    <picture>
+                        <source srcset="./assets/tropical-sunrise.webp" type="image/webp">
+                        <img src="./assets/tropical-sunrise.jpg" alt="Amanecer tropical">
+                    </picture>
+                    <picture>
+                        <source srcset="./assets/logo2.svg" type="image/svg+xml">
+                        <img src="./assets/logo2.png" alt="Logotipo">    
+                    </picture>
+                    <p>Etiqueta figure</p>
+                    <figure>
+                        <img src="./assets/komodo.jpg" alt="">
+                        <figcaption>Varano de Komodo</figcaption>
+                    </figure>
+                    <figure>
+                         <img src="./assets/iguana.jpg" alt="">
+                        <figcaption>Iguana</figcaption>                       
+                    </figure>
                 </section>
                 <section>
                     <h3>Video y Audio</h3>
+                    <p>Es posible incluir un video desde una fuente externa</p>
+                    <div class="embed-container">
+                        <iframe 
+                        src="https://www.youtube.com/embed/rg_zwK_sSEY" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>                        
+                    </div>
+                    <p>Otra opción es reproducir videos de nuestro servidor</p>
+                    <video controls>
+                        <source src="./assets/Ghost_in_the_Shell_Opening.webm" type="video/webm">
+                        <source src="./assets/Ghost_in_the_Shell_Opening.mp4" type="video/mp4">
+                    </video>
+                    <audio src="./assets/Lady Gaga - Poker Face [www.slider.kz].mp3" controls></audio>
                 </section>
                 <section>
                     <h3>Elementos gráficos de navegación</h3>
                 </section>
+                <aside>
+                    <h3>Elementos embebidos no multimedia</h3>
+                    <p>La etiqueta iframe permite acceder a otra web desde la nuestra</p>
+                    <iframe class="web_externa" src="https://www.tajamar.es/"></iframe>
+                </aside>
             </section>
         </main>
         <aside>

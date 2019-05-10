@@ -62,6 +62,7 @@ img {
     max-width: 25%;
     display: block;
     float: left;
+    background-color: burlywood;
 }
 
 .image_wrapper_25 {
@@ -133,3 +134,26 @@ footer a {
 /* strong {
     font-weight: normal;
 } */
+
+.web_externa {
+    width: 100%;
+    height: 60vh;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    max-width: 100%;
+}
