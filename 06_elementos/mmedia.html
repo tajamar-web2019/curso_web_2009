@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Multimedia - Elementos de la Web</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body id="inicio">
@@ -17,6 +20,8 @@
                 <li><a href="./index.html#grouping" rel="tag">Grrouping</a></li>
                 <li><a href="./index.html#text_level" rel="tag">Text-Level</a></li>
                 <li><a href="#">Multimedia</a></li>
+                <li><a href="./datos.html#tablas">Tablas</a></li>
+                <li><a href="./datos.html#form">Formularios</a></li>
             </ul>
         </nav>
     </header>
@@ -67,9 +72,9 @@
                                     ./assets/komodo.400.jpg 400w, 
                                     ./assets/komodo.500.jpg 500w,
                                     ./assets/komodo.jpg 600w"
-                             size = "(max-width: 300px),
-                                     (max-width: 400px), 
-                                     (max-width: 500px)"       
+                             sizes = "(max-width: 300px) 300px,
+                                     (max-width: 400px) 400px, 
+                                     (max-width: 500px) 500px"       
                             src="./assets/komodo.jpg"
                         alt="Varano de Komodo mostrando su lengua bífida">
                     </div>
@@ -110,19 +115,28 @@
                         allowfullscreen></iframe>                        
                     </div>
                     <p>Otra opción es reproducir videos de nuestro servidor</p>
-                    <video controls>
+                    <video controls poster="./assets/ghost-in-shell.jpg">
                         <source src="./assets/Ghost_in_the_Shell_Opening.webm" type="video/webm">
                         <source src="./assets/Ghost_in_the_Shell_Opening.mp4" type="video/mp4">
                     </video>
-                    <audio src="./assets/Lady Gaga - Poker Face [www.slider.kz].mp3" controls></audio>
+                    <audio src="./assets/" controls></audio>
                 </section>
                 <section>
                     <h3>Elementos gráficos de navegación</h3>
+                    <p>En HTML antiguo de usaba la etiqueta map para definir un hotspot</p>
+                    <p>En HTML5 se puede conseguir este efecto usando svg</p>
+                    <embed src="./assets/logo.svg" type="image/svg+xml">
+                    <p>También relacionado con la navegación gráfica estaría el uso de iconos en los menus</p>
                 </section>
                 <aside>
                     <h3>Elementos embebidos no multimedia</h3>
                     <p>La etiqueta iframe permite acceder a otra web desde la nuestra</p>
                     <iframe class="web_externa" src="https://www.tajamar.es/"></iframe>
+                    <p>Otras formas de insertar contenido externo son object y embed</p>
+                    <p>Object</p>
+                    <object data="https://www.tajamar.es/" type="text/html"></object>
+                    <p>Embed</p>
+                    <embed src="https://www.tajamar.es/" type="text/html">
                 </aside>
             </section>
         </main>
@@ -131,11 +145,6 @@
             <p>Aquí iría la publicidad</p>
         </aside>  
     </div>
-    <footer class="main_footer">
-        <address>
-            <p>Alejandro Cerezo - <a rel="author" href="mailto://alce65@hotmail.es">alce65@hotmail.es</a></p>
-            <p><small> &copy; Tajamar</small></p>
-        </address>
-    </footer>
+    <iframe class="iframe_footer" src="./_footer.html"></iframe>
 </body>
 </html>

@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inicio - Elementos de la Web</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body id="inicio">
     <header class="main_header">
-        <h1>Etiquetas de HTML</h1>
+        <h1>Etiquetas de HTML <i class="fab fa-html5"></i></h1>
         <p>Clasificación de las <strong>etiquetas</strong> según el <strong>estándar HTML 5.2</strong></p>
         <nav>
             <ul>
@@ -17,6 +20,8 @@
                 <li><a href="#grouping" rel="tag">Grrouping</a></li>
                 <li><a href="#text_level" rel="tag">Text-Level</a></li>
                 <li><a href="./mmedia.html">Multimedia</a></li>
+                <li><a href="./datos.html#tablas">Tablas</a></li>
+                <li><a href="./datos.html#form">Formularios</a></li>
             </ul>
         </nav>
     </header>
@@ -50,18 +55,17 @@
                         <p>Su funcionalidad principal es estructurar semánticamente un documento a la hora de ser representado por parte de un agente usuario. Por ejemplo, un agente de usuario que represente el documento en voz, podría exponer al usuario el índice de contenido por niveles para navegar rápidamente por las distintas partes.</p>
                         <footer>
                                 <cite>
-                                    <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/section/#wikiArticle" rel="external">https://developer.mozilla.org/es/docs/Web/HTML/Elemento/section</a>                        
+                                    <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/section/#wikiArticle" rel="external">https://developer.mozilla.org/ es/docs/Web/HTML/Elemento/section</a>                        
                                 </cite>
                             </footer>
                     </blockquote>    
-
                 </section>
                 <section id="header">
                     <h3>Etiqueta header</h3>
                     <blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/header">El elemento de HTML Header (&lt;header&gt;) representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, pero también otros elementos como un logo, una sección que aglutine secciones de encabezados, una formulario de búsqueda o cosas parecidas.
                     <footer>
                         <cite>
-                            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/header/#wikiArticle" rel="external">https://developer.mozilla.org/es/docs/Web/HTML/Elemento/header</a>                        
+                            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/header/#wikiArticle" rel="external">https://developer.mozilla.org/ es/docs/Web/HTML/Elemento/header</a>                        
                         </cite>
                     </footer>
                     </blockquote> 
@@ -73,7 +77,7 @@
                         <p>Un pie de página típicamente contiene información acerca del autor de la sección, datos de derechos de autor o enlaces a documentos relacionados.</p>  
                         <footer>
                             <cite>
-                                <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/footer/#wikiArticle" rel="external">https://developer.mozilla.org/es/docs/Web/HTML/Elemento/footer</a>                        
+                                <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/footer/#wikiArticle" rel="external">https://developer.mozilla.org/ es/docs/Web/HTML/Elemento/footer</a>                        
                             </cite>
                         </footer>                  
                     </blockquote>
@@ -95,7 +99,7 @@
                     <em>independiente o reutilizable</em>, por ejemplo, en la sindicación. Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento independiente del contenido
                         <footer>
                             <cite>
-                                <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/article/#wikiArticle" rel="external">https://developer.mozilla.org/es/docs/Web/HTML/Elemento/article</a>
+                                <a class="palabra_rota" href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/article/#wikiArticle" rel="external">https://developer.mozilla.org/ es/docs/Web/HTML/Elemento/article</a>
                             </cite>
                         </footer>                    
                     </blockquote>
@@ -106,7 +110,7 @@
                     El Elemento HTML Aside (&lt;aside&gt;) representa una sección de una página que consiste en contenido que está <em>tangencialmente relacionado</em> con el contenido que le rodea, que podría ser considerado independiente de ese contenido. Estas secciones son a menudo representadas como barras laterales o como inserciones y contienen una explicación al margen como una definición de glosario, elementos relacionados indirectamente, como publicidad, la biografía del autor, o en aplicaciones web, la información de perfil o enlaces a blogs relacionados.
                         <footer>
                             <cite>
-                                <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/aside/#wikiArticle" rel="external">https://developer.mozilla.org/es/docs/Web/HTML/Elemento/aside</a>
+                                <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/aside/#wikiArticle" rel="external">https://developer.mozilla.org/ es/docs/Web/HTML/Elemento/aside</a>
                             </cite>
                         </footer>
                     </blockquote>
@@ -120,8 +124,10 @@
                         <footer>Tomado de <a href="https://codepen.io/mi-lee/post/an-overview-of-html5-semantics">CodePen</a></footer>
                     </figcaption>
                 </figure>
-                <footer>
-                    <a href="#inicio" rel="tag">Inicio</a>
+                <footer class="main_section_footer">
+                    <a href="#inicio" rel="tag" title="Inicio">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
                 </footer>
             </section>
             <section id="grouping">
@@ -209,9 +215,11 @@
                     <p>La etiqueta br crea un saldo de línea</p>
                     <br>
                 </section>
-                <footer>
-                    <a href="#inicio" rel="tag">Inicio</a>
-                </footer>            
+                <footer class="main_section_footer">
+                    <a href="#inicio" rel="tag" title="Inicio">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </footer>         
             </section>
             <section id="text_level">
                 <header>
@@ -300,8 +308,10 @@
                     <p>Muestran el contenido que se ha insertado (Instead) en lugar de otro, que por tanto se elimina (Deleted).</p>
                     <p><del>Esto ya no vale</del><ins>Ahora es así</ins></p>
                 </section>
-                <footer>
-                    <a href="#inicio" rel="tag">Inicio</a>
+                <footer class="main_section_footer">
+                    <a href="#inicio" rel="tag" title="Inicio">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
                 </footer>
             </section>             
         </main>
@@ -310,11 +320,7 @@
             <p>Aquí iría la publicidad</p>
         </aside>    
     </div>
-    <footer class="main_footer">
-        <address>
-            <p>Alejandro Cerezo - <a rel="author" href="mailto://alce65@hotmail.es">alce65@hotmail.es</a></p>
-            <p><small> &copy; Tajamar</small></p>
-        </address>
-    </footer>
+    <iframe class="iframe_footer" src="./_footer.html"></iframe>
 </body>
 </html>
+
