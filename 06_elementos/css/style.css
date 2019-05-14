@@ -198,3 +198,40 @@ video, embed {
 .sin-borde {
     border:0;
 }
+
+.centrar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main_table,
+.viajes_table {
+    width: 100%;
+    text-align: center; 
+}
+.main_table>tbody>tr>th{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+/* filas pares */
+.main_table>tbody>tr:nth-of-type(even) {
+    background-color: beige
+}
+/* filas impares */
+.main_table>tbody>tr:nth-of-type(odd) {
+    background-color: darkseagreen
+}
+
+.viajes_table th {
+    border: 1px solid grey;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+/* filas pares celdas de datos */
+.viajes_table tr:nth-of-type(even) td {
+    background-color: goldenrod
+}
+/* filas impares celdas de datos */
+.viajes_table tr:nth-of-type(odd) td {
+    background-color: coral
+}
