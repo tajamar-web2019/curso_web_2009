@@ -194,3 +194,7 @@ footer a {
 video, embed {
     max-width: 100%;
 }
+
+.sin-borde {
+    border:0;
+}
