@@ -22,7 +22,7 @@
                 <li><a href="./index.html#text_level" rel="tag">Text-Level</a></li>
                 <li><a href="./mmedia.html">Multimedia</a></li>
                 <li><a href="#tablas">Tablas</a></li>
-                <li><a href="#form">Formularios</a></li>
+                <li><a href="#forms">Formularios</a></li>
             </ul>
         </nav>
     </header>
@@ -170,12 +170,114 @@
                     <li>action</li>
                     <li>method</li>
                 </ul>
-                <form action="https://jsonplaceholder.typicode.com/users" method="POST">
+                <h3>Formulario mínimo</h3>
+                <p>Ejemplo de los elementos mínimos de un formulario y uso de los distintos métodos: GET y POST</p>
+                <h4>Uso de GET</h4>
+                <form name="basic-get" method="GET">
                     <input type="text" name="userName" placeholder="Dime tu nombre">
                     <input type="password" name="userPasswd" placeholder="Dime tu password">
                     <button type="submit">Enviar</button>
                 </form>
-
+                <h4>Uso de POST</h4>
+                <form action="https://jsonplaceholder.typicode.com/users"
+                    name="basic-post" method="POST">
+                    <input type="text" name="userName" placeholder="Dime tu nombre">
+                    <input type="password" name="userPasswd" placeholder="Dime tu password">
+                    <button type="submit">Enviar</button>
+                </form>
+                <h3>Formulario más completo</h3>
+                <p>Usamos en un mismo formulario los principales controles</p>
+                <form name="complete-post" method="POST"
+                    action="https://jsonplaceholder.typicode.com/users">
+                    <fieldset id="datos_personales">
+                        <legend>Datos personales</legend>
+                        <label for="userName" class="form_label">
+                            Nombre de usuario</label>
+                        <input type="text" name="userName" id="userName" required
+                            class="form_control" placeholder="Dime tu nombre y apellidos">
+                        <label for="userPasswd" class="form_label">
+                            Contraseña</label>    
+                        <input type="password" name="userPasswd" id="userPasswd" required 
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})" class="form_control" placeholder="Dime tu password">
+                        <label for="email" class="form_label">Correo</label>
+                        <input type="email" name="email" id="email" required
+                            class="form_control" placeholder="Escribe un correo electrónico válido" value="@tajamar.es">
+                        <label for="cv" class="form_label">Formación</label>
+                        <input type="text" name="cv" id="cv" list="formacion" class="form_control"
+                            placeholder="Selecciona o indica tus estudios">
+                        <datalist id="formacion">
+                            <option>Graduado</option>
+                            <option>Licenciado</option>
+                            <option>Doctor</option>
+                        </datalist>
+                        <label for="birthDate" class="form_label">Fecha de nacimiento</label>
+                        <input type="date" name="birthDate" id="birthDate" class="form_control">      
+                        <label for="info" class="form_label">
+                            Más información</label>
+                        <textarea name="info" id="info" rows="5"
+                            placeholder="Más información" 
+                            class="form_control"></textarea>                 
+                    </fieldset>
+                    <fieldset id="condiciones">
+                        <legend>Condiciones</legend>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum animi non perspiciatis ut excepturi dolores obcaecati ullam dignissimos. Error incidunt corrupti debitis totam ea similique ab soluta hic id pariatur.</p>
+                        <input type="checkbox" name="isOk" id="isOk" required>
+                        <label for="isOk">Estoy deacuerdo con las condiciones</label>
+                    </fieldset>
+                    <fieldset id="datos_curso">
+                        <legend>Datos del curso</legend>
+                        <label for="curso" class="form_label">Curso</label>
+                        <!-- <select name="curso" id="curso" class="form_control" multiple size="8"> -->
+                        <select name="curso" id="curso" class="form_control" required> 
+                            <option value="">Elige un valor</option>
+                            <optgroup label="Desarrollo Front">
+                                <option value="HTML-01">HTML5</option>
+                                <option value="CSS-02">CSS3</option>
+                                <option value="JS-03">JavaScript</option>                                
+                            </optgroup>
+                            <optgroup label="Programación Back">
+                                <option value="Node-04">Node JS</option>
+                                <option value="PHP-05">PHP</option>
+                            </optgroup>
+                        </select>
+                        <label class="form_label">Ubicaciones</label>
+                        <div class="radio_wrapper">
+                            <input type="radio" name="sitio" id="madrid" value="MD" required>
+                            <label for="madrid">Madrid</label>
+                            <input type="radio" name="sitio" id="sevilla" value="SV"> 
+                            <label for="sevilla">Sevilla</label>
+                            <input type="radio" name="sitio" id="barna" value="BN">
+                            <label for="barna">Barcelona</label> 
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Enviar">
+                    <button type="submit">
+                        Enviar <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <input type="reset" value="Borrar">
+                    <button type="reset">
+                        Borrar <i class="fas fa-eraser"></i>
+                    </button>
+                    <button type="button">Sin uso</button>
+                </form>
+                <p>Existen otros controles de formulario</p>
+                <dl>
+                    <dt class="dt">Input color</dt>
+                    <dd class="dd"><input type="color"></dd>
+                    <dt class="dt">Input file</dt>
+                    <dd class="dd"><input type="file"></dd>
+                    <dt class="dt">Input number</dt>
+                    <dd class="dd"><input type="number" min="0" max="10" step="2"></dd>
+                    <dt class="dt">Input range</dt>
+                    <dd class="dd"><input type="range" min="-1" max="1"></dd>
+                    <dt class="dt">Input search</dt>
+                    <dd class="dd"><input type="search"></dd>
+                    <dt class="dt">Input tel</dt>
+                    <dd class="dd"><input type="tel"></dd>
+                    <dt class="dt">Input url</dt>
+                    <dd class="dd"><input type="url"></dd>
+                </dl>
+                <div class="clearfix"></div>
             </section>
         </main>
         <aside>

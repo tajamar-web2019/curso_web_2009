@@ -235,3 +235,49 @@ video, embed {
 .viajes_table tr:nth-of-type(odd) td {
     background-color: coral
 }
+
+.form_control {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding-top: 0.7rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.radio_wrapper {
+    padding-top: 0.7rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.placeholder {
+    color: brown;
+    background-color: bisque;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+.form_control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: brown;
+    opacity: 1; /* Firefox */
+  }
+  
+  .form_control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: brown;
+  }
+  
+  .form_control::-ms-input-placeholder { /* Microsoft Edge */
+    color: brown;
+  }
+
+.form_label {
+    display: block;
+    margin-top: 1rem;
+}
+
+fieldset {
+    margin-bottom: 1rem;
+    border-color: bisque;
+}
+
