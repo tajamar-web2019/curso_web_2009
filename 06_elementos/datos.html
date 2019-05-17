@@ -196,9 +196,10 @@
                         <input type="text" name="userName" id="userName" required
                             class="form_control" placeholder="Dime tu nombre y apellidos">
                         <label for="userPasswd" class="form_label">
-                            Contraseña</label>    
+                            Contraseña. <span title=" 1.) at least 1 upper case character 2.) at least 1 lower case character 3.) at least 1 numerical character 4.) at least 1 special character">Ver formato</span></label>  
                         <input type="password" name="userPasswd" id="userPasswd" required 
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})" class="form_control" placeholder="Dime tu password">
+                        pattern="(?=^.{6,255}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*"
+                        class="form_control" placeholder="Dime tu password">
                         <label for="email" class="form_label">Correo</label>
                         <input type="email" name="email" id="email" required
                             class="form_control" placeholder="Escribe un correo electrónico válido" value="@tajamar.es">
