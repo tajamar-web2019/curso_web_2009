@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+/* 
+Ejemplo de import asociado a una media Query
+@import url(./header.css) screen and (max-device-width: 500px);
+ 
+Ejemplo de imports sin condiciones
+@import url(./header.css);
+@import url(./footer.css);
+
+Otras directivas son
+@font-face
+@keyframes
+
+@namespace
+@page
+@supports
+
+*/
+
+/* Selector de etiqueta */
+body {
+    background-color: bisque;
+}
+
+/* Selector de clase */
+.azul {
+    color: blue
+}
+
+/* Selector de id : NO SE USA por BUENAS PRÁCTICAS */
+#verde {
+    color: darkgreen
+}
+
+/* Forma más habitual de usar media Queries*/
+
+@media screen and (max-device-width: 500px) {
+
+    body {
+        background-color: coral
+    }
+
+}

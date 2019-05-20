@@ -23,7 +23,8 @@
   "homepage": "https://github.com/alce65/curso_web_2009#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "dialog-polyfill": "^0.5.0"
+    "dialog-polyfill": "^0.5.0",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {}
 }
