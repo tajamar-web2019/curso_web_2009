@@ -1,0 +1,95 @@
+
+/******************
+Estilos del Header
+********************/
+
+header {
+    background-color: brown;
+    color: bisque;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 5rem; 
+}
+    
+header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.3rem; 
+    font-weight: bold;
+}
+
+/***********************************
+Estilos de la sección .combinadores
+*************************************/
+
+/* Selectores combinados (antes selectores contextuales) */
+
+/* Selector de descendientes (descendent) - símbolo el espacio  */
+section.combinadores p {
+    background-color: coral
+} 
+
+/* Selector de hijo (child) - símbolo es el > */
+section.combinadores>p {
+    background-color: cyan
+} 
+
+/* Selector de hermanos (sibilings) - el simbolo es la ~ */
+section.combinadores div~p {
+    background-color: darkseagreen;
+}
+
+/* Selector de hermanos adyacentes (adyacent sibilings) el símbolo es el + **/
+section.combinadores div+p {
+    background-color: goldenrod;
+}
+
+/* Selector de atributo - simbolo [] */
+
+p[title] {
+    color: crimson;
+}
+
+/* Atributo igual a  */
+[title="Extra"] {
+    color: blue;
+}
+
+/* Atributo empieza por  */
+[title^="Par"] {
+    color: darkgreen !important;
+}
+
+/* Atributo contiene  */
+[title*="rraf"] {
+    color: darkmagenta
+}
+
+/* Atributo termina por  */
+[title$="1"] {
+    color: gold
+}
+
+/******************
+Estilos del Footer
+********************/
+
+footer {
+    background-color: brown;
+    color: bisque;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+footer address {
+    font-style: normal
+}
+footer p {
+    margin-top: 0;
+    margin-bottom: 0;    
+}
