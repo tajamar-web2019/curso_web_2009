@@ -32,6 +32,14 @@ body {
     color: darkgreen
 }
 
+/* Selectores agrupados*/
+p, blockquote { font-size: 1.1rem}
+
+/* p {font-size: 1.1rem}
+blockquote {font-size: 1.1rem}
+ */
+
+
 /* Forma más habitual de usar media Queries*/
 
 @media screen and (max-device-width: 500px) {
