@@ -1,0 +1,101 @@
+:root {
+ --color-letra: bisque;
+ --color-fondo: maroon;
+ --font-main: 'Lato', sans-serif;
+ --font-title: 'Baloo Bhai', cursive;
+ --size-title: calc( var(--size-small) * 3);
+ --size-subtitle: calc( var(--size-small) * 2);
+ --size-title-section: 1.2rem;
+ --size-base: calc(14rem/16);
+ --size-small: calc(12rem/16);
+ --margin-vertical: 1.5rem;
+ --margin-lateral: 2rem;
+ --margin-parrafo: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+    font-family: var(--font-main);
+    font-size: var(--size-base)
+}
+
+/******************
+Estilos del Header
+********************/
+
+.header {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    font-family: var(--font-title);
+    font-weight: bold;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 5rem; 
+}
+    
+.header h1 {
+    font-size: var(--size-title)
+}
+
+.header p {
+    font-size:var(--size-subtitle); 
+}
+
+/******************
+Estilos del Footer
+********************/
+.footer {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    font-size: var(--size-small);
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+.footer address {
+    font-style: normal
+}
+
+.footer a {
+    color: inherit;
+}
+
+/******************
+Estilos del main
+********************/
+
+main {
+    margin: var(--margin-vertical) var(--margin-lateral);
+}
+
+main h2 {
+    font-size: var(--size-title-section);
+    margin-bottom: calc( var(--margin-vertical)/2);
+    margin-top: calc( var(--margin-vertical)/2);
+}
+
+main p {
+    margin-bottom: var(--margin-parrafo);
+    margin-top: var(--margin-parrafo);
+}
+
+/**********************************
+Estilos de las secciones del main
+***********************************/
+
+section {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 1rem;
+}
