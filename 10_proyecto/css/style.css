@@ -1,6 +1,8 @@
 :root {
  --color-letra: bisque;
  --color-fondo: maroon;
+ --color-gris-fondo: lightgray;
+ --color-gris-borde: rgb(165, 165, 165);
  --font-main: 'Lato', sans-serif;
  --font-title: 'Baloo Bhai', cursive;
  --size-title: calc( var(--size-small) * 3);
@@ -90,12 +92,48 @@ main p {
 }
 
 /**********************************
-Estilos de las secciones del main
+Estilos de las secciones 
 ***********************************/
-
 section {
-    width: 49%;
+    margin-top: var(--margin-vertical);
+    margin-bottom: var(--margin-vertical);
+}
+
+section article {
+    width: 50%;
+    padding: 1rem;
+    background-color: var(--color-gris-fondo);
+    border: 1px solid var(--color-gris-borde);    
+}
+
+section.inline-block article {
     display: inline-block;
     vertical-align: top;
-    padding: 1rem;
+}
+
+section.inline-block article:nth-of-type(2) {
+    margin-left: -3px
+}
+
+section.float article {
+    float: left;
+}
+
+section.float::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section .table {
+    display: table;
+}
+
+section .table article {
+    display: table-cell;
+}
+
+section .flex {
+    display: flex;
+    /* align-items: center */
 }
