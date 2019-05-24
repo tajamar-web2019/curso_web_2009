@@ -1,0 +1,17 @@
+:root {
+    --color-letra: bisque;
+    --color-fondo: maroon;
+    --color-gris-fondo: lightgray;
+    --color-gris-borde: rgb(165, 165, 165);
+    --font-main: 'Lato', sans-serif;
+    --font-title: 'Baloo Bhai', cursive;
+    --size-title: calc( var(--size-small) * 3);
+    --size-subtitle: calc( var(--size-small) * 2);
+    --size-title-section: 1.2rem;
+    --size-title-article: 1rem;
+    --size-base: calc(14rem/16);
+    --size-small: calc(12rem/16);
+    --margin-vertical: 1.5rem;
+    --margin-lateral: 2rem;
+    --margin-parrafo: 1rem;
+   }
