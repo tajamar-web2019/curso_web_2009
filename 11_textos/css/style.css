@@ -1,11 +1,50 @@
 @font-face {
-    font-family: "source_sans_proregular";
-    src: url(../assets/SourceSansPro-Regular.otf) format('otf');
+    font-family: "source_sans_pro";
+    src: url(../assets/SourceSansPro-Regular.otf) format('truetype');
     src: url(../assets/sourcesanspro-regular-webfont.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: "getsu_magic";
+    src: url(../assets/Getsu_Magic.otf) format('truetype');
+    src: url(../assets/getsu_magic-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "seves_brg";
+    src: url(../assets/SEVESBRG.TTF) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: "source_sans_proregular"
+    font-family: "source_sans_pro", sans-serif;
+}
+
+h1 {
+    /* font-family:  "seves_brg", cursive */
+    font-family: "getsu_magic", cursive;
+    padding: 1em;
+}
+
+.content_wrapper {
+    font-size: 1.1rem;
+}
+
+section.centrada {
+    width: 83.8%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+section.centrada p { border: 1px solid;
+    padding: 1em;
+}
+
+.margenes {
+    /* display: flex; */
 }
