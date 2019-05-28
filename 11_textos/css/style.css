@@ -34,7 +34,10 @@ body {
 h1 {
     /* font-family:  "seves_brg", cursive */
     font-family: "getsu_magic", cursive;
-    padding: 1em;
+    font-size: 4rem;
+    padding: 1rem 2rem;
+    border: 1px solid;
+    border-radius: 10px;
 }
 
 .content_wrapper {
@@ -106,6 +109,14 @@ section.centrada p { border: 1px solid;
 
     .flex .flex-wrapper {
         display: flex;
+    }
+
+    .flex h2 {
+        text-shadow:  5px 5px 5px grey
+    }
+
+    .flex p {
+        box-shadow: 5px 5px 10px 10px grey
     }
     
     .flex p:not(:last-of-type) {
