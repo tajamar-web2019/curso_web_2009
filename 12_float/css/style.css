@@ -1,5 +1,7 @@
 
-
+body {
+    margin: 0;
+}
 
 main {
     margin: 5%;
@@ -15,25 +17,77 @@ section.reptiles:after{
 .img-wrapper-left {
     width: 50%;
     float: left;
-    padding-right: 2rem;
-    padding-bottom: 0.5rem;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .img-wrapper-right {
     width: 50%;
     float: right;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.table-wrapper-right {
+    float: right;
     padding-left: 2rem;
     padding-bottom: 0.5rem;
+    padding-right: 2rem
+}
+
+.table-wrapper-right:hover table {
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+td {
+    padding: 0.2rem 1rem;
+    border: 1px solid; 
 }
 
 img {
     max-width: 100%;
+    /* display: block; */
+    vertical-align: bottom;
 }
 
-/* footer {
-
+header, footer {
+    background-color: maroon;
+    color: bisque;
+    text-align: center;
 } 
 
-aside con texto
+header h1, footer {
+    line-height: 8rem;
+}
 
-*/
+h1 {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+header p {
+    padding-bottom: 1rem;
+    visibility: hidden;
+    /* display: none; */
+}
+
+header:hover p {
+    visibility: initial;
+    /* display: initial; */
+}
+
+
+ul {
+    list-style-position: inside;
+    list-style-type: georgian; 
+}
+
+aside:before,
+aside:after {
+    content: '';
+    display: block;
+    padding: 0.5rem;
+    background-color: #339966;
+    opacity: 0.6;
+}
