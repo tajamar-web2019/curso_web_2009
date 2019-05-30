@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+header {
+    min-height: 100vh;
+    background-color: burlywood;
+
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+
+    /* background-image: url(../assets/img-noise-32x32.png); */
+    background-image: url(../assets/komodo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: difference; 
+}
+
+h1 {
+    color: gold
+}
