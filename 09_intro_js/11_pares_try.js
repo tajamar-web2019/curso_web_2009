@@ -34,17 +34,19 @@ function isEntero( n = 0) {
   * @description Función que calcula si un número es par
   *     Puede devolver: -2, -1, true, false
   * @param {number}: n
-  * @returns {*}
+  * @returns {boolean}
   * 
   */
   function esPar(n) {
     let r = true 
     if (!isValidNumber(n)) {
         // Excepción: n no es un número
-        return -2
+        //throw 1 // antes -2
+        throw `${n} no es un número`
     } else if (!isEntero(n)) {
         // Excepción: n no es entero
-        return -1
+        // throw 0 // antes -1
+        throw `El número ${n} no es entero`
     } else if (n%2)  {
         r = false
     }
@@ -58,17 +60,49 @@ function isEntero( n = 0) {
    * @returns {void}
    */
    function mostrar(n) {
+       let output = ''
        let mensajes = [
            `El número ${n} es impar`,
            `El número ${n} es par`,
-           `El número ${n} no es entero`,
+       ]
+       let excepciones = [
+            `El número ${n} no es entero`,
            `${n} no es un número`
        ]
-       let i = Number(esPar(n)) // -2 -1, 0, 1
-       if ( i< 0) { // código de error
-         i = -i + 1 // -1 -> 2 // -2 -> 3
+       try {
+           let i = Number(esPar(n))   //i: 0, 1
+           output = mensajes[i]
+       } catch (error) { // error: -2 -1
+            // i = -error + 1 // -1 -> 2 // -2 -> 3
+            // output = excepciones[error]
+            output = error
        }
-       console.log(mensajes[i])
+       console.log(output)
    }
+
+  /*   
+    Gestión de errores
+    const x = 67
+    let z = 45
+    try {
+        x = 51 // => un throw
+        // throw 'Probando un error'
+        z = z + x
+        console.log('z vale', z)
+    } catch (e) {
+        console.log('Disculpa, se ha producido un error')
+        if(e.name) {
+            console.log(e.name, e.message)
+        } else {
+            console.log(e)
+        }
+    }
+    console.log('x vale',x)
+ */
    
-   module.exports = esPar
+
+/*     esPar('pepe')
+    mostrar('pepe') */
+    
+
+module.exports = esPar;
