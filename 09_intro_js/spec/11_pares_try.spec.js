@@ -37,16 +37,15 @@ describe('Función esPar', () => {
         expect(esPar(n)).toEqual(true)
     })
 
-    /* it('should throw error if n = "pepe"', () => {
+    it('should throw error if n = "pepe"', () => {
         let x = 'pepe'
-        expect(esPar(x)).toThrow();
-        // expect(esPar(x)).toThrowError(/no es un número/);
-    }) */;
+        expect(esPar.bind(x)).toThrowError(/no es un número/);
+    });
 
-    /* it('should throw error if n = 4.3', () =>  {
+    it('should throw error if n = 4.3', () =>  {
         let x = 4.3
-        expect(esPar(x)).toThrow();
-    }); */
+        expect(esPar.bind(x)).toThrow();
+    });
     
     // x = -56.7
 

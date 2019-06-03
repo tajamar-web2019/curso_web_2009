@@ -42,11 +42,11 @@ function isEntero( n = 0) {
     if (!isValidNumber(n)) {
         // Excepción: n no es un número
         //throw 1 // antes -2
-        throw `${n} no es un número`
+        throw new Error(`${n} no es un número`)
     } else if (!isEntero(n)) {
         // Excepción: n no es entero
         // throw 0 // antes -1
-        throw `El número ${n} no es entero`
+        throw new Error(`El número ${n} no es entero`)
     } else if (n%2)  {
         r = false
     }
