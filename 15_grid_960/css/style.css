@@ -1,7 +1,32 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
 }
 header, footer {
     background-color: brown;
     color: bisque;
+}
+
+main {
+    min-height: 80vh;
+    background-color: bisque;
+}
+
+.colum_wrapper {
+    width: 95%;
+    margin: 1rem auto;
+}
+
+.columnas {
+    column-count: 3;
+    /* column-width: 25%; */
+    column-gap: 2rem;
+    column-rule: 1px solid maroon;
+    column-fill: balance;
+}
+
+.columnas p:nth-of-type(1) {
+    margin-top: 0;
 }

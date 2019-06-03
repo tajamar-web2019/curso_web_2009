@@ -13,7 +13,7 @@
   Note: IE6 works fine without this fix.
 */
 
-body {
+main {
   min-width: 960px;
 }
 
@@ -43,7 +43,7 @@ body {
 .grid_12
  {
   display: inline;
-  /* float: left; */
+  float: left;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -125,7 +125,6 @@ body {
 .container_12 .grid_12 {
   width: 940px;
 }
-
 
 /* `Prefix Extra Space >> Global
 ----------------------------------------------------------------------------------------------------*/
@@ -377,15 +376,4 @@ body {
 .container_12:after,
 .container_16:after {
   clear: both;
-}
-
-/*
-  The following zoom:1 rule is specifically for IE6 + IE7.
-  Move to separate stylesheet if invalid CSS is a problem.
-*/
-
-.clearfix,
-.container_12,
-.container_16 {
-  zoom: 1;
 }
