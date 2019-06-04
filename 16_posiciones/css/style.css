@@ -8,15 +8,18 @@ body {
 header, footer {
     background-color: brown;
     color: bisque;
-    min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+header {
+    min-height: 10vh;
+}
+
 main {
     width: 90%;
-    margin: 1rem auto;
+    margin: 1rem auto 4rem auto; 
     min-height: 80vh;
 }
 
@@ -49,6 +52,44 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
+    height: 1.3rem;
+    overflow: hidden;
+    align-items: flex-start;
 }
+ footer:hover {
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+ }
 
+ .center {
+     text-align: center;
+ }
 
+ .overflow {
+     height: 40vh;
+     overflow-y: scroll;
+ }
+
+ .overflow::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  .overflow::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px; 
+  }
+  
+  /* Handle */
+  .overflow::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  .overflow::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    background: #b30000; 
+  }
