@@ -1,0 +1,71 @@
+	body {
+		margin-left: 2em;
+	}
+	h1{
+		font-size: 3em;
+		text-shadow: 4px 4px 4px rgb(200,200,200);
+	}
+
+	
+/*	el menú principal */
+
+	nav ul { /* Cualquier ul dentro de nav */
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		}
+
+	nav li { /* Los li son contenedores, para poder fijar desde ellos posiciones absolutas */
+		position: relative;
+		}
+
+	nav a { /* Cualquier a dentro de nav */
+		display: block;
+		margin: .25em;
+		padding: .5em;
+		background-color: rgba(200,200,200,0.5);	
+		border: 1px solid #ba89a8; /*violeta*/
+		border-radius: .5em;
+		text-align: center;
+	}
+
+	nav > ul > li { /* El primer nivel del menú */
+		float:left;
+		min-width: 7em;
+		}
+	nav > ul a:focus, nav > ul a:hover { /* Cualquier a dentro de nav */
+		color:#fc6; /*naranja*/
+		border-color: #fff; /*blanco*/
+		background-color: rgba(200,200,200,0.2)
+	}
+	 
+/* =================== */
+/* = submenús        = */
+/* =================== */
+			
+	li ul { /* El segundo nivel del menú oculto*/
+	 	display: none
+	}
+	li:hover > ul { /* El segundo nivel del menú se muestra */
+	 	display: block;
+	 	position: absolute;
+	}
+
+/* ============== */
+/* = Contenidos = */
+/* ============== */
+
+	
+	article{
+		float: left;
+		clear: left;
+		margin: 2em;
+	}
+	figure {
+		float: left;
+		width: 50%;
+	}
+	img {
+		width: 100%
+	}
+

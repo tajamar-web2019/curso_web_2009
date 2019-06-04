@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+}
+header {
+    color: brown;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+}
+
+header::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0.3;
+    background-image: url(../assets/komodo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    
+    z-index: 30;
+    width: fit-content;
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    opacity: 0.4;
+    top: 2rem;
+    right: 2rem;
+    width: 20%; 
+}
+
+.logo img {
+    max-width: 100%;
+    min-width: 80px;
+}
+
+nav {
+    position: absolute; 
+    top: 60%;
+    z-index: 30; 
+}
+
+.content-wrapper {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+

@@ -1,0 +1,91 @@
+	body {
+		margin-left: 2em;
+	}
+	h1{
+		font-size: 3em;
+		text-shadow: 4px 4px 4px rgb(200,200,200);
+	}
+
+	li { /* Los li son contenedores, para poder fijar desde ellos posiciones absolutas */
+		position: relative;
+		}
+
+/*	el menú principal */
+
+	nav {
+		float:left;
+		}
+
+	nav ul { /* Cualquier ul dentro de nav */
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		}
+
+	nav > ul > li { /* El primer nivel del menú */
+		float:left;
+		clear:both;
+		min-width: 8em;
+		}
+
+	nav a { /* Cualquier a dentro de nav */
+		display: block;
+		margin: .25em;
+		padding: .5em;
+		background-color: rgba(200,200,200,1);		
+		border: 1px solid #ba89a8; /*violeta*/
+		border-radius: .5em;
+		text-align: center;
+	}
+
+	nav > ul a:focus { /* Cualquier a dentro de nav */
+		color:#fc6; /*naranja*/
+		border-color: #fff; /*blanco*/
+		background-color: rgba(200,200,200,1);
+	}
+	nav > ul a:hover { /* Cualquier a dentro de nav */
+		color: #fc6; /*naranja*/
+		border-color: #fff; /*blanco*/
+		background-color: rgba(200,200,200,1);
+	}
+
+/*	submenús */
+			
+	li ul { /* El segundo nivel del menú oculto*/
+	 	display: none;
+	}
+	li:hover > ul { /* El segundo nivel del menú se muestra */
+	 	display: block;
+	 	position: absolute;
+		top: 0em;
+		left: 8em;
+		width: 8em;
+	}
+
+/* =============================== */
+/* = submenús segundos	         = */
+/* =============================== */
+	li ul li ul {
+		position: absolute;
+		top: 0em;
+		left: 5em;
+		width: 10em;
+	}
+	
+/* ============== */
+/* = Contenidos = */
+/* ============== */
+
+	article{
+		float:left;
+		width: 70%;
+	}
+	
+	figure {
+		float: left;
+		clear: right;
+		margin: auto 0;
+	}
+	img {
+		width: 100%
+	}
