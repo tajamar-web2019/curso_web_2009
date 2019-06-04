@@ -40,13 +40,15 @@ function isEntero( n = 0) {
   function esPar(n) {
     let r = true 
     if (!isValidNumber(n)) {
-        // Excepción: n no es un número
-        //throw 1 // antes -2
-        throw new Error(`${n} no es un número`)
+        // Excepción: n no es un número // antes -2
+        const error = new Error(`${n} no es un número`)
+        error.numero = 1
+        throw error
     } else if (!isEntero(n)) {
-        // Excepción: n no es entero
-        // throw 0 // antes -1
-        throw new Error(`El número ${n} no es entero`)
+        // Excepción: n no es entero // antes -1
+        const error = new Error(`El número ${n} no es entero`)
+        error.numero = 0
+        throw error
     } else if (n%2)  {
         r = false
     }
@@ -74,11 +76,14 @@ function isEntero( n = 0) {
            output = mensajes[i]
        } catch (error) { // error: -2 -1
             // i = -error + 1 // -1 -> 2 // -2 -> 3
-            // output = excepciones[error]
-            output = error
+            output = excepciones[error.numero]
+            //output = error.message
        }
        console.log(output)
    }
+
+   mostrar('pepe')
+   mostrar(2.4)
 
   /*   
     Gestión de errores
@@ -99,10 +104,6 @@ function isEntero( n = 0) {
     }
     console.log('x vale',x)
  */
-   
 
-/*     esPar('pepe')
-    mostrar('pepe') */
-    
-
-module.exports = esPar;
+exports.esPar = esPar;
+exports.mostrar = mostrar
