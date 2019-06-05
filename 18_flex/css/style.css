@@ -1,0 +1,54 @@
+
+body {
+    margin: 0;
+    background-color: bisque
+}
+
+header {
+    background-color: brown;
+    color: bisque;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.flex {
+    min-height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+
+    align-items: stretch;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: baseline;
+
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around;
+
+}
+
+section.flex div {
+    font-size: 4rem;
+    padding: 1rem;
+    background-color: darksalmon;
+    margin: 0.5rem
+}
+
+section.flex div:nth-of-type(4) {
+    font-size: 4rem;
+}
