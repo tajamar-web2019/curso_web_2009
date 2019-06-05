@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fondos</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/menu_ancho.css">
 </head>
 <body>
-    <header>
+    <header id="inicio">
         <h1>El mundo de los Reptiles
             <span class="logo">
                 <img src="./assets/74261.svg" alt="logo">
             </span>
         </h1>
-        <nav>
+        <nav class='icon'>
+            <a href="#nav-footer" class="fas fa-bars"></a>
+        </nav>
+        <nav class="horizontal">
             <ul>
                 <li><a href="#">Características</a>
                     <ul>
@@ -75,6 +78,46 @@
             <p>Quaerat assumenda, magni provident quibusdam id, illum repellendus mollitia libero asperiores voluptatum excepturi minus! Vero sapiente qui, distinctio quos libero velit natus veritatis consequuntur. Quas eius iste ducimus nisi dolores?</p>
         </section>
     </div>
+    <nav class="footer" id="nav-footer">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#">Características</a>
+                <ul>
+                    <li><a title="Temperatura corporal" href="">Temperatura</a></li>
+                    <li><a href="">Alimentación</a></li>
+                    <li><a href="">Respiración</a></li>
+                    <li><a title="Sistema circulatorio" href="">Circulación</a></li>
+                    <li><a href="">Excreción</a></li>
+                    <li><a title="Anatomía y morfología" href="">Morfoanatomía</a>
+                    <ul>
+                        <li><a href="">Anatomía</a></li>
+                        <li><a href="">Morfología</a></li>
+                    </ul>
+                    </li>
+
+                    <li><a href="">Reproducción</a></li>
+                </ul>
+            </li>
+            <li><a title="Clase Reptilia" href="#">
+                Clasificación</a>
+                <ul>
+                    <li><a title="Subclase Anapsida" href="#">Anapsidos</a>						
+                        <ul>
+                            <li><a title="Orden Testudines" href="#">Quelonidos</a></li>						
+                        </ul>						
+                    </li>
+                    <li><a title="Subclase Diapsida" href="#">Diapsidos</a>
+                        <ul>
+                            <li><a title="Orden Crocodilia" href="#">Crocodiliamos</a></li>
+                            <li><a title="Orden Sphenodontia" href="#">Esfenodontos</a></li>						
+                            <li><a title="Orden Squamata" href="#">Escamosos</a></li>
+                        </ul>						
+                    </li>
+                </ul>				
+            </li>              
+            <li><a href="#">Comportamiento</a></li>  
+        </ul>
+    </nav>
     <footer>
         <address>Alejandro Cerezo</address>
     </footer>
