@@ -56,10 +56,6 @@ div.superior {
         width: 4.5rem;     
     }
 
-    div.superior embed path {
-        fill: brown;    
-    }
-
 nav a {
     color: inherit;
     text-decoration: none;
@@ -69,7 +65,7 @@ nav ul {
 }
 
 div.inferior {
-    z-index: 20;
+    z-index: 10;
     flex: 10 1 auto;
     display: flex;
     justify-content: center; /* horizontal */
@@ -145,17 +141,20 @@ footer {
        display: initial;
     }
 
-    nav.horizontal ul {
+    nav li { /* Los li son contenedores, para poder fijar desde ellos posiciones absolutas */
+		position: relative;
+		}
+
+    nav ul {
         padding: 0;
         margin: 0;
-        display: flex;
-        border: 1px solid #ba89a8;
         background-color: rgba(200,200,200,0.2);
+        display: flex;
     }
 
     nav a { /* Cualquier a dentro de nav */
 		display: block;
-		padding: 0.3rem 0.5rem;
+		padding: 0.3rem 0.7rem;
 		/* margin: 0.25em;
         border-radius: .5em;
         border: 1px solid #ba89a8;
@@ -163,8 +162,50 @@ footer {
         */
         text-align: center; 
         font-weight: bold;
-	}
+    }
+    
+    nav.horizontal>ul>li{
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: center;
+    }
 
+    nav.horizontal>ul>li:not(:last-of-type)::after{
+        content: "|";
+        font-weight: bold;
+    }
+
+    /* =================== */
+    /* = submenús        = */
+    /* =================== */
+                
+    li ul { /* El segundo nivel del menú oculto*/
+        display: none;
+    }
+    nav>ul>li:hover > ul { /* El segundo nivel del menú se muestra */
+        display: block;
+        position: absolute;
+        top: 1.7rem
+    }
+
+    /* =============================== */
+    /* = submenús segundos	         = */
+    /* =============================== */
+    /* El segundo nivel del menú se muestra */
+
+    nav>ul>li:nth-of-type(1)>ul>li:hover > ul { 
+        display: block;
+        position: absolute;
+        top: 0rem;
+        left: 7rem;
+    }
+
+    nav>ul>li:nth-of-type(2)>ul>li:hover > ul { 
+        display: block;
+        position: absolute;
+        top: 0rem;
+        left: 5rem;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -185,16 +226,5 @@ footer {
         padding: 0.3rem 2rem;
     }
 
-    nav.horizontal ul {
-        border: 0;
-    }
 
-    nav.horizontal>ul>li{
-        display: flex;
-        align-items: center;
-    }
-
-    nav.horizontal>ul>li:not(:last-of-type)::after{
-        content: "|";
-    }
 }
