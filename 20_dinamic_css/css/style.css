@@ -1,0 +1,52 @@
+section {
+    margin: 3rem;
+}
+
+div {
+    background-color: brown;
+    color: bisque;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+}
+
+div.transit {
+    transition-property: all;
+    transition-duration: 6s;
+    transition-delay: 2s;
+    transition-timing-function: cubic-bezier(.44,1.07,.88,.33) 
+}
+
+p.boton:hover+div {
+    color: brown;
+    background-color: bisque;
+    width: 6rem;
+    height: 6rem;
+    font-size: 3rem;
+    font-family: fantasy;
+}
+
+div.transform {
+    transition-property: all;
+    transition-duration: 6s;
+    transition-timing-function: linear 
+}
+
+p.btn-escalar:hover+div{
+    transform: scale(3)
+}
+
+p.btn-rotar:hover+div{
+    transform: rotate(80deg)
+}
+
+p.btn-inclinar:hover+div{
+    transform: skew(20deg)
+}
+
+p.btn-trasladar:hover+div{
+    transform: translateX(20rem)
+}
