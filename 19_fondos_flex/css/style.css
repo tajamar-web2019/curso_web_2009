@@ -45,6 +45,19 @@ div.superior {
 
     div.superior nav.icon {
         font-size: 3rem;
+        transition: transform 1s;
+    }
+
+    div.superior nav.icon:hover,
+    div.superior nav.icon:focus,
+    div.superior nav.icon:target
+     {
+        transform: scale(1.2)
+    }
+
+    div.superior nav.icon:hover div,
+    div.superior nav.icon:focus div {
+        transform: translate(90vw)
     }
 
     div.superior nav.horizontal {
@@ -53,7 +66,19 @@ div.superior {
 
     div.superior img,
     div.superior embed {
-        width: 4.5rem;     
+        width: 4.5rem;
+        transform: rotate(-360deg);
+        transition: transform 10s;
+    }
+
+    div.superior .cortinilla {
+        position: absolute;
+        top: 3rem;
+        left: -100vw;
+        width: 90vw;
+        height: 80vh;;
+        transition: transform 1s;
+        background-color: rgba(128, 128, 128, 0.8);
     }
 
 nav a {
@@ -77,6 +102,10 @@ h1 {
     text-align: center;
     padding: 2rem;
     margin: 0;
+    position: relative;
+    left: -40rem;
+    transform: translateX(40rem) rotate(360deg);
+    transition: transform 4s;
 }
 
 .content-wrapper {

@@ -75,10 +75,12 @@ div.transform {
 }
 
 p.btn-escalar:hover+div{
+    transform-origin: left;
     transform: scale(3)
 }
 
 p.btn-rotar:hover+div{
+    transform-origin: left;
     transform: rotate(80deg)
 }
 
@@ -87,7 +89,8 @@ p.btn-inclinar:hover+div{
 }
 
 p.btn-trasladar:hover+div{
-    transform: translateX(20rem)
+    
+    transform: translateX(-20rem);
 }
 
 /*
@@ -105,3 +108,14 @@ button embed {
     vertical-align: middle;
     color: brown;
 }
+
+
+section.tresD {
+    perspective: 500px;
+
+}
+
+p.btn-3D:hover+div{
+    transform: translate3d(3rem, 3rem, -3rem);
+    transform: translate(3rem, 3rem)
+} 
