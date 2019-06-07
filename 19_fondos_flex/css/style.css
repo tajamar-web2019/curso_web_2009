@@ -163,6 +163,19 @@ footer {
         text-align: center; 
         font-weight: bold;
     }
+
+    nav a {
+        transition: 
+            color 1s, 
+            background-color 1s;
+    }
+
+    nav > ul a:focus,
+	nav > ul a:hover
+	{ /* Cualquier a dentro de nav */
+		background-color: brown;
+		color: #fc6;
+	}
     
     nav.horizontal>ul>li{
         display: flex;
