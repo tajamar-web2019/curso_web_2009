@@ -13,14 +13,53 @@ div {
     text-align: center;  
 }
 
-div.transit {
+.verde {
+    color: darkslategray
+}
+
+section.boton button:nth-child(1) {
+    background-color: cadetblue
+}
+section.boton button:nth-child(2) {
+    background-color: darkgoldenrod
+}
+section.boton button:nth-child(3) {
+    background-color: indianred
+}
+
+.defer {
+    /* quotes: "\00AB" "\00BB"; */
+    quotes: "«" "»";
+}
+
+.defer p::before {
+   content: open-quote;
+   /* content: "«" */
+}
+
+.defer p::after {
+    content: close-quote;
+    /* content: "»" */
+}
+
+
+/* .defer p:hover+div 
+Solo el hermano adyacente 
+*/
+ 
+ .defer p:hover~div /*Todos los hermanos*/
+{
+    background-color: darkgoldenrod
+}
+
+section.transit div.transit {
     transition-property: all;
     transition-duration: 6s;
     transition-delay: 2s;
     transition-timing-function: cubic-bezier(.44,1.07,.88,.33) 
 }
 
-p.boton:hover+div {
+section.transit p.boton:hover+div {
     color: brown;
     background-color: bisque;
     width: 6rem;
@@ -49,4 +88,20 @@ p.btn-inclinar:hover+div{
 
 p.btn-trasladar:hover+div{
     transform: translateX(20rem)
+}
+
+/*
+**************** Botones
+*/
+
+button {
+    color: brown;
+    font-size: 2rem;
+}
+
+button img,
+button embed {
+    width: 1.8rem;
+    vertical-align: middle;
+    color: brown;
 }

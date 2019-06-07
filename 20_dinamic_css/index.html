@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSS Dinámico</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -23,13 +24,33 @@
         </li>
         <li>Animaciones</li>
     </ul>
+    <section class="boton">
+        <button>
+            <img src="./assets/bars-solid.svg" alt="">
+            Menu
+        </button>
+        <button>
+            <embed src="./assets/bars-solid.svg" type="image/svg+xml">
+                Menu
+        </button>
+        <button>
+            <i class="fas fa-bars verde"></i> Menu
+        </button>
+    </section>
+    <section class="defer">
+            <h2>Hover diferido</h2>
+            <p class="boton">Coloca aquí el ratón</p>
+            <div class="color"></div>        
+            <div class="color"></div>  
+    </section>
+
     <section class="transit">
         <h2>Transiciones</h2>
         <p class="boton">Coloca aqui el ratón</p>
         <div class="transit"><span>A</span></div>
     </section>
     <section class="transform">
-        <h2>Transformaciones</h2>
+        <h2>Transformaciones + Transiciones</h2>
         <p class="btn-escalar">Coloca aquí el ratón: escalar</p>
         <div class="transform"><span>A</span></div>
         <p class="btn-rotar">Coloca aquí el ratón: rotar</p>
