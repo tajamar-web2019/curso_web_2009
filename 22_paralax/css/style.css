@@ -1,0 +1,62 @@
+
+
+.parallax-wrapper {
+    width: 100vw;
+    height:100vh;
+    padding-top:20vh;
+    box-sizing: border-box;
+}
+.regular-wrapper {
+    width: 100vw;
+    height:100vh;
+    padding-top:20vh;
+    background-image: url("../asetts/komodo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.content {
+    margin: 0 auto;
+    padding: 50px;
+    width: 50%;
+    background: #aaa;
+}
+.parallax-wrapper::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-image: url("../asetts/iguana.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover; 
+    position: absolute;
+    z-index: -1;
+}
+
+html {
+    overflow: hidden;
+}
+body {
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.parallax-wrapper {
+    transform-style: preserve-3d;
+}
+
+.parallax-wrapper::before {
+    transform:translateZ(-1px) scale(2);
+}
+
+.parallax-wrapper::before {
+    z-index: -1;
+}
+.regular-wrapper {
+    z-index: 2;
+    position: relative;
+}
