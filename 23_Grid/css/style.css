@@ -1,0 +1,26 @@
+
+body {
+    margin: 0;
+    background-color: bisque
+}
+
+header {
+    background-color: brown;
+    color: bisque;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.grid {
+    min-height: 70vh;
+    display: grid;
+}
+
+section.grid div {
+    font-size: 4rem;
+    padding: 1rem;
+    background-color: darksalmon;
+    margin: 0.5rem
+}
