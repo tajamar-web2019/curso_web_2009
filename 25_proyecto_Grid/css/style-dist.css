@@ -1,0 +1,173 @@
+/* @import url(./variables.css); */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+    font-family: var(--font-main);
+    font-size: var(--size-base)
+}
+
+/******************
+Estilos del Header
+********************/
+
+.header {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    font-family: var(--font-title);
+    font-weight: bold;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 5rem; 
+}
+    
+.header h1 {
+    font-size: var(--size-title)
+}
+
+.header p {
+    font-size:var(--size-subtitle); 
+}
+
+/******************
+Estilos del Footer
+********************/
+.footer {
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+    font-size: var(--size-small);
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+.footer address {
+    font-style: normal
+}
+
+.footer a {
+    color: inherit;
+}
+
+/******************
+Estilos del main
+********************/
+
+main {
+    margin: var(--margin-vertical) var(--margin-lateral);
+}
+
+main h2 {
+    font-size: var(--size-title-section);
+    font-family: var(--font-title);
+    font-weight: bold;
+    margin-bottom: -webkit-calc( var(--margin-vertical)/2);
+    margin-bottom: -moz-calc( var(--margin-vertical)/2);
+    margin-bottom: calc( var(--margin-vertical)/2);
+    margin-top: -webkit-calc( var(--margin-vertical)/2);
+    margin-top: -moz-calc( var(--margin-vertical)/2);
+    margin-top: calc( var(--margin-vertical)/2);
+}
+
+main h3 {
+    font-size: var(--size-title-article);
+    font-weight: bold;
+}
+
+main p {
+    margin-bottom: var(--margin-parrafo);
+    margin-top: var(--margin-parrafo);
+}
+
+/**********************************
+Estilos de las secciones 
+***********************************/
+section {
+    margin-top: var(--margin-vertical);
+    margin-bottom: var(--margin-vertical);
+}
+
+section>header {
+    color: var(--color-fondo);
+    background-color:  var(--color-letra);
+    padding: 0.3rem 1rem;
+    margin-bottom: var(--margin-parrafo)
+
+}
+
+section article {
+    width: 50%;
+    padding: 1rem;
+    background-color: var(--color-gris-fondo);
+    border: 1px solid var(--color-gris-borde);    
+}
+
+section.inline-block article {
+    display: inline-block;
+    vertical-align: top;
+}
+
+section.inline-block article:nth-of-type(2) {
+    margin-left: -3px
+}
+
+section.float article {
+    float: left;
+}
+
+section.float::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section .table {
+    display: table;
+}
+
+section .table article {
+    display: table-cell;
+}
+
+section .flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* align-items: center */
+} 
+
+section .flex article {
+    width: 100%;
+}
+
+/* @media screen and (min-device-width: 600px) { */
+@media screen and (min-width: 600px) {
+     section .flex {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -moz-box-orient: horizontal;
+        -moz-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
