@@ -14,13 +14,43 @@ header {
 }
 
 section.grid {
-    min-height: 70vh;
+    /* min-height: 70vh; */
+    margin: 0.5rem;
     display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-rows: 2fr repeat(3, 1fr); */
+    grid-template-rows: 2fr 1fr;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+    grid-auto-rows: 1fr;
+
 }
 
 section.grid div {
     font-size: 4rem;
     padding: 1rem;
     background-color: darksalmon;
-    margin: 0.5rem
 }
+
+section.grid div:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+} 
+
+section.grid div:nth-of-type(2) {
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+    grid-column: 2 / 3;
+    /* grid-row-start: 3;
+    grid-row-end: 5; */
+    grid-row: 3 / span 2;
+
+    
+} 
+
+section.grid div:nth-of-type(9) {
+    grid-row-start: 5;
+    grid-row-end: 7;
+} 
