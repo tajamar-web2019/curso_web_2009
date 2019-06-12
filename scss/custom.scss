@@ -1,0 +1,15 @@
+$theme-colors: (
+  "letra": bisque,
+  "fondo": maroon
+);
+
+$font-family-base: 'Lato', sans-serif;
+
+.header-font {
+  font-family: 'Baloo Bhai', cursive;;
+}
+.min-vh-10 {
+  min-height: 10vh;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
