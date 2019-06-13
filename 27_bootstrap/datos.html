@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Datos - Bootstrap</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header-font text-letra bg-fondo pt-4 pb-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xs">
+                    <h1>Uso de Bootstrap</h1>   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="nav justify-content-start ">
+                        <li class="nav-item">
+                            <a class="nav-link text-letra" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-letra" href="#">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-letra" href="#">Datos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main class="row">
+            <section class="col">  
+                <div class="jumbotron">
+                    <h2 class="display-3">Datos </h2>
+                    <p class="lead">Formulario</p>
+                </div>
+                <div class="container">
+                    <form>
+                        <fieldset class="form-group">
+                            <legend>Datos de usuario</legend>
+                            <div class="form-group">
+                                <label for="inputName">Nombre</label>
+                                <input type="text" class="form-control" 
+                                    name="inputName" id="inputName" 
+                                    aria-describedby="helpName" placeholder="Escribe tu nombre">
+                                <small id="helpName" class="form-text text-muted">
+                                    Nombre del usuario
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputApellido" >Apellidos</label>
+                                <input type="text" class="form-control" 
+                                    name="inputApellido" id="inputApellido" 
+                                    aria-describedby="helpApellido" placeholder="">                            
+                                <small id="helpApellido" class="form-text text-muted">
+                                    Apellidos del usuario
+                                </small>  
+                            </div>
+                            <div class="form-group">
+                              <label for="passw">Password</label>
+                              <input type="password" class="form-control" 
+                                name="passw" id="passw" placeholder="">
+                            </div>
+                            <div class="form-group">
+                              <label for="email">Correo</label>
+                              <input type="email" class="form-control" 
+                                name="email" id="email" value="@tajamar.es"
+                                aria-describedby="emailHelpId" placeholder="">
+                              <small id="emailHelpId" class="form-text text-muted">Help text</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="formacion">Formación</label>
+                              <input type="text" class="form-control" 
+                                name="formacion" id="formacion" list="formacionOpciones"
+                                aria-describedby="helpFormacion" placeholder="">
+                              <small id="helpFormacion" class="form-text text-muted">Selecciona o indica tus estudios</small>
+                            </div>
+                            <datalist id="formacionOpciones">
+                                <option>Graduado</option>
+                                <option>Licenciado</option>
+                                <option>Doctor</option>
+                            </datalist>
+                            <div class="form-group">
+                              <label for="birthDate">Fecha de nacimiento</label>
+                              <input type="date"
+                                class="form-control" 
+                                name="birthDate" id="birthDate" 
+                                aria-describedby="helpBirthDate" placeholder="">
+                              <small id="helpBirthDate" class="form-text text-muted">Help text</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="info">Más información</label>
+                              <textarea class="form-control" name="info" id="info" rows="5"></textarea>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                                <legend>Condiciones</legend>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum animi non perspiciatis ut excepturi dolores obcaecati ullam dignissimos. Error incidunt corrupti debitis totam ea similique ab soluta hic id pariatur.</p>
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" 
+                              name="isOk" id="isOk" required>  
+                              <label for="isOk" class="custom-control-label">Estoy de acuerdo</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <legend>Datos del curso</legend>                        
+                            <div class="form-group">
+                              <label for="curso">Curso</label>
+                              <select class="form-control" name="curso" id="curso">
+                                    <option value="">Elige un valor</option>
+                                    <optgroup label="Desarrollo Front">
+                                        <option value="HTML-01">HTML5</option>
+                                        <option value="CSS-02">CSS3</option>
+                                        <option value="JS-03">JavaScript</option>                                
+                                    </optgroup>
+                                    <optgroup label="Programación Back">
+                                        <option value="Node-04">Node JS</option>
+                                        <option value="PHP-05">PHP</option>
+                                    </optgroup>
+                              </select>
+                            </div>
+                            <div>
+                                <label>Ubicaciones</label>   
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" 
+                                    name="sede" id="madrid" value="MD">
+                                <label for="madrid" class="custom-control-label">Madrid</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">  
+                                <input type="radio" class="custom-control-input" 
+                                    name="sede" id="sevilla" value="SV">
+                                <label for="sevilla" class="custom-control-label">Sevilla</label>     </div>  
+                            <div class="custom-control custom-radio custom-control-inline"> 
+                                <input type="radio" class="custom-control-input" 
+                                    name="sede" id="barna" value="BN">
+                                <label for="barna" class="custom-control-label">Barcelona</label>
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-fondo text-letra">Enviar</button>
+                        </div>
+                    </form>
+                </div>    
+            </section>
+        </main>
+    </div>
+    <footer class="min-vh-10 text-letra bg-fondo
+                    d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-xs-12">
+                    <address class="mb-0"> Alejandro Cerezo</address>   
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="../node_modules/holderjs/holder.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

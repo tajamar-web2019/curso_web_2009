@@ -1,0 +1,9 @@
+body {
+    position: relative;
+    overflow-y: scroll; 
+}
+
+
+.margen-extra {
+    margin-top: 15rem;
+}
