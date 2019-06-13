@@ -1,0 +1,16 @@
+{
+  "name": "28_pug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pug": "pug -w -P -p ./pug/partials -O ./pug/options.json ./pug/templates -o ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.3"
+  }
+}
