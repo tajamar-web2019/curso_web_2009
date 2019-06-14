@@ -1,23 +1,104 @@
-<!DOCTYPE html>
+
+<!-- esto es un comentario
+esto sigue siendo cometario
+
+-->
+<!-- Mixin--><!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Hola Pug</title>
+    <title>Hola Pug </title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-    <header>
+    <!-- Comentario-->
+    <header class="main-header" id="main-header">
       <h1>Hola Pug</h1>
+      <nav class="main-menu">
+        <ul>
+          <li><a href="#inicio" title="Bla bla bla">Inicio</a></li>
+          <li><a href="#clientes" title="Bla bla bla">Clientes</a></li>
+          <li><a href="#porfolio" title="Bla bla bla">Porfolio</a></li>
+          <li><a href="#partners" title="Bla bla bla">Partners</a></li>
+          <li><a href="#acerca" title="Bla bla bla">Aceca de</a></li>
+        </ul>
+      </nav>
     </header>
-    <section>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Dolor, <strong>quas mollitia</strong>, odio laboriosam dolorem aliquid quod 
-        fugiat repudiandae eum veritatis sed quo dolorum tempore nihil qui delectus quidem accusamus ab.
-      </p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos impedit animi, sed distinctio cupiditate iure nesciunt aliquam illo iste quis quos aut voluptas magni corrupti sunt, at, rerum sapiente <b>laborum!</b></p>
+    <main>
+      <section id="inicio">
+        <header>
+          <h2>Inicio</h2>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Dolor, <strong>quas mollitia</strong>, odio laboriosam dolorem aliquid quod 
+          fugiat repudiandae eum veritatis sed quo dolorum tempore nihil qui delectus quidem accusamus ab.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos impedit animi, sed distinctio cupiditate iure nesciunt aliquam illo iste quis quos aut voluptas magni corrupti sunt, at, rerum sapiente <b>laborum!</b></p>
+        <div class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt omnis illo reprehenderit nam deleniti excepturi, eaque corrupti iure, tempore incidunt, animi suscipit exercitationem! Eos sint voluptas impedit beatae, quos et!</div>
+        <figure><img src="https://via.placeholder.com/500x350/" alt="Image placeholder"></figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo facilis dolor distinctio, itaque quo in aliquid iure reiciendis at? Nisi expedita quibusdam iusto cupiditate ad aut ipsam ab magni porro?</p>
+      </section>
+    </main>
+    <section id="clientes">
+      <header>
+        <h2>Clientes</h2>
+      </header>
+      <p>Seleccione el arré geográfica    </p>
+      <form action="">
+        <select name="pais">
+          <option value="es" title="Bla bla bla">España</option>
+          <option value="fr" title="Ble ble ble">Francia</option>
+          <option value="it" title="Bli bli bli">Italia</option>
+        </select>
+      </form>
     </section>
-    <footer>
-      <address>Alejandro Cerezo Lasne</address>
+    <section id="porfolio">
+      <header>
+        <h2>Profolio</h2>
+        <nav>
+          <ul>
+            <li><a href="#web" title="Bla bla bla">Páginas Web</a></li>
+            <li><a href="#apps" title="Bla bla bla">Mobile Apps</a></li>
+            <li><a href="#ux" title="Bla bla bla">UX / UI</a></li>
+          </ul>
+        </nav>
+      </header>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo illum dicta perspiciatis ipsam ullam sequi optio dolore tempore quam illo fugit molestias id suscipit, ipsum nesciunt iure consequatur? Tenetur, et.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea obcaecati veniam laboriosam asperiores harum fugit nemo iusto ex qui sit quidem, doloremque soluta, accusamus, aspernatur veritatis eum repellendus sequi aut!</p>
+    </section>
+    <section id="acerca">
+      <header>
+        <h2>Aceca de</h2>
+        <p>Bla bla bla</p>
+      </header>
+      <h3>Formulario de contactos</h3>
+      <form action="">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre">
+          <p class="error" hidden="hidden">Aquí irán los errores</p>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email">
+          <p class="error" hidden="hidden">Aquí irán los errores</p>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password">
+          <p class="error" hidden="hidden">Aquí irán los errores</p>
+        </div>
+        <div class="form-group">
+          <label for="comentarios">Comentarios</label>
+          <textarea name="comentarios" cols="30" rows="10"></textarea>
+          <p class="error" hidden="hidden">Aquí irán los errores</p>
+        </div>
+      </form>
+    </section>
+    <footer class="main-footer">
+      <address>&copy; Alejandro Cerezo</address>
+      <div><small>Colegio <b>Tajamar</b></small></div>
     </footer>
   </body>
 </html>
