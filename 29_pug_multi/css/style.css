@@ -18,6 +18,13 @@ nav a {
     padding: 1rem;
 }
 
+nav a.activo {
+    color: gold;
+    text-decoration: underline;
+    text-decoration-color: gold;
+    
+}
+
 .form-group {
     padding: 1rem;
 }
