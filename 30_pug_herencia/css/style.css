@@ -1,0 +1,49 @@
+.main-header,
+.main-footer
+{
+    background-color: brown;
+    color: bisque;
+}
+
+.main-header h1 {
+    padding: 0.6rem 2rem;
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+nav a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 1rem;
+}
+
+nav a.activo {
+    color: gold;
+    text-decoration: underline;
+    text-decoration-color: gold;
+    
+}
+
+.form-group {
+    padding: 1rem;
+}
+
+.form-group label,
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    border: none;
+    border-bottom: 1px solid rgba(169, 169, 169, 0.65)
+}
+

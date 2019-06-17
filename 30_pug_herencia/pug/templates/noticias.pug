@@ -1,0 +1,11 @@
+extends ../partials/layout.pug
+
+block variables
+    -const page = 5
+    -const tituloPagina = 'Noticias'
+
+block main
+    section(id=aMenu[page-1].id)
+        header
+            h2= aMenu[page-1].nombre
+            p= aMenu[page-1].description

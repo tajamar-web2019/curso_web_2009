@@ -1,0 +1,21 @@
+extends ../partials/layout.pug
+
+block variables
+    -const page = 6
+    -const tituloPagina = 'Acerca de'
+
+block main
+    section(id=aMenu[page-1].id)
+        header
+            h2= aMenu[page-1].nombre
+            p= aMenu[page-1].description
+        h3 Formulario de contactos
+        form(action="")
+            +inputGroup('Nombre')
+                input(type="text", name="nombre")
+            +inputGroup('Email')
+                input(type="email", name="email")
+            +inputGroup('Password')
+                input(type="password", name="password")
+            +inputGroup('Comentarios')
+                textarea(name="comentarios", cols="30", rows="10")

@@ -1,0 +1,19 @@
+-
+    const aMenu = [ 
+        {nombre: 'Inicio' , id: 'index', description: 'Bla bla bla'},
+        {nombre: 'Clientes', id: 'clientes', description: 'Bla bla bla'}, 
+        {nombre: 'Porfolio', id: 'porfolio', description: 'Bla bla bla'}, 
+        {nombre: 'Partners', id: 'partners', description: 'Bla bla bla'},
+        {nombre: 'Noticias', id: 'noticias', description: 'Noticias de prensa sobre'}, 
+        {nombre: 'Aceca de', id: 'acerca', description: 'Bla bla bla'}] 
+- const icono = '<i class="fas fa-dog"></i> '
+
+header#main-header.main-header 
+    if (page == 1)
+        h1!= icono+titulo
+    else
+        h1!= icono+`${titulo} - ${tituloPagina}`
+    nav.main-menu
+        ul
+            each item, index in aMenu
+                +itemMenu(item, index)

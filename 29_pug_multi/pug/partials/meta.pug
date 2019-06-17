@@ -2,6 +2,12 @@ doctype
 html(lang=language)
     head
         meta(charset=charset)
+        //- - if () {
+        //-     title #{titulo}
+        //- - } else {
+        //-      title #{tituloPagina} | #{titulo}
+        //- - }
+
         if (page == 1)
             title #{titulo}
         else
