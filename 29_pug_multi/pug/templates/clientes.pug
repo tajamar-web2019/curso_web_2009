@@ -1,0 +1,23 @@
+-const page = 2
+-const aPaises = [{nombre: 'España', id: 'es', description: 'Bla bla bla'}, {nombre: 'Francia', id: 'fr', description: 'Ble ble ble'}, {nombre: 'Italia', id: 'it', description: 'Bli bli bli'}]
+
+include ../partials/variables.pug
+include ../partials/mixins.pug
+        
+include ../partials/meta.pug
+body
+    include ../partials/header.pug
+    main    
+        section#clientes
+            header
+                h2 Clientes
+            p Seleccione el arré geográfica    
+            form(action="")
+                select(name="pais")
+                    //- -for (i = 0; i < aPaises.length; i++) {
+                    //- -let item = aPaises[i]
+                    //- option(value=item.id title=item.description) #{item.nombre}
+                    //- -}
+                    each item in aPaises
+                        option(value=item.id title=item.description) #{item.nombre}
+    include ../partials/footer.pug            

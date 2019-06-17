@@ -1,0 +1,10 @@
+// Mixin
+mixin itemMenu(item)
+    li
+        a(href=item.id.toLowerCase()+".html" title=item.description) #{item.nombre}
+
+mixin inputGroup(inputName)
+    .form-group
+        label(for=inputName.toLowerCase()) #{inputName}
+        block
+        p.error(hidden) Aquí irán los errores

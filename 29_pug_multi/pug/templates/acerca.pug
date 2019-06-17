@@ -1,0 +1,24 @@
+-const page = 5
+
+include ../partials/variables.pug
+include ../partials/mixins.pug
+        
+include ../partials/meta.pug
+body
+    include ../partials/header.pug
+    main
+        section(id=aMenu[4].id)
+            header
+                h2= aMenu[4].nombre
+                p= aMenu[4].description
+            h3 Formulario de contactos
+            form(action="")
+                +inputGroup('Nombre')
+                    input(type="text", name="nombre")
+                +inputGroup('Email')
+                    input(type="email", name="email")
+                +inputGroup('Password')
+                    input(type="password", name="password")
+                +inputGroup('Comentarios')
+                    textarea(name="comentarios", cols="30", rows="10")
+    include ../partials/footer.pug 
