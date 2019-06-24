@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "Alejandro Cerezo",
   "license": "ISC",
-  "dev-dependencies": {
+  "devDependencies": {
     "jasmine": "^3.4.0"
   }
 }
