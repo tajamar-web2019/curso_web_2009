@@ -13,6 +13,7 @@ for (let i = 0; i < limite; i++) {
         break
     }
     acumulador += (i*i)
+    // acumulador = acumulador + (i*i)
 }
 console.log(acumulador, contador)
 {
@@ -81,3 +82,5 @@ module.exports.extraerMultiplos = extraerMultiplos
     let misDatos = [1,2,3,4,5,6,7,8,9]
     mostrarMultiplos(2, misDatos)
 }
+
+
