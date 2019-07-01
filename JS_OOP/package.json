@@ -1,0 +1,15 @@
+{
+  "name": "JS_OOP",
+  "version": "1.0.0",
+  "description": "",
+  "main": "00_media.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.4.0"
+  }
+}
