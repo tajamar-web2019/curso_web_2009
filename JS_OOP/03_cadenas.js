@@ -1,4 +1,6 @@
 'use strict'
+let intl = require('intl')
+require('intl/locale-data/jsonp/es.js');
 
 let version = 'ES6'
 
@@ -21,6 +23,31 @@ for (let i = 0; i < cadena.length; i++) {
 let x = cadena.split(' ').join('').toUpperCase()
 console.log(x)
 
+/* cadena.slice(inicio, final)
+cadena.substring(nicio, final)
+cadena.substr(inicio, desplazamiento)
 
+cadena.match()
+cadena.search()
+cadena.replace()
+
+cadena.indexOf(clave)
+cadena.lastIndexOf(clave)
+
+cadena.charAt(posicion) // cadena[position]
+cadena.charCodeAt(posion)
+
+String.fromCharCode(num) */
+
+let numero = 23.7865432
+console.log(numero)
+console.log(numero.toString())
+console.log(numero.toFixed(2))
+console.log(numero.toPrecision(4))
+numero = 0.00000000000000237865432
+console.log(numero.toExponential())
+console.log(numero)
+numero = 23.7864
+console.log(numero.toLocaleString('es',  { style: 'currency', currency: 'EUR' }))
 
 
