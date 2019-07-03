@@ -1,7 +1,8 @@
 let ob = {} // new Object()
 let aDatos = [2, 8, 9, 76] // new Array()
-aDatos[aDatos.length] = 87
-aDatos[aDatos.length] = 56
+// aDatos[aDatos.length] = 87
+// aDatos[aDatos.length] = 56
+aDatos.push(87, 56)
 
 aDatos[100] = 9
 // console.log(aDatos[78])
