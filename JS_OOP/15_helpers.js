@@ -1,6 +1,5 @@
 const { aDias, aMeses} = require('./12_datos.js')
 
-
 const capitalize = (cadena = '') => 
         cadena[0].toUpperCase() + cadena.slice(1)
 
@@ -24,18 +23,21 @@ const fechaEsp = (fecha = new Date() ) => {
     return `${nombreDia}, ${dia} de ${mes} del ${año}`
 }
 
-const fechaEspShort = (fecha = new Date() ) => {
-    fecha = (typeof fecha === 'string') ? new Date(fecha) : fecha
-    return aDias[fecha.getDay()] + ', ' 
-        + fecha.getDate() + ' de ' 
-        + aMeses[fecha.getMonth()] + ' del ' 
-        + fecha.getFullYear() }
+function fijarLongitudCadena (cadena = '', lon = 0) {
+    if (cadena.length < lon) {
+        // añadir espacio
+        const espacios = lon - cadena.length
+        for (let i = 0; i < espacios; i++) {
+            cadena += ' ';
+        }
+    } else if (cadena.length > lon) {
+        // truncar
+        cadena = cadena.slice(0, lon-3) + '...'
+    }
+    return cadena
+}
 
-let f = new Date(1965,7,31)
-f = '1965-8-31'
-console.log(fechaEsp(f))
-console.log(fechaEspShort(f))
 
 module.exports = {}
-module.exports.fechaEsp = fechaEspShort
-
+module.exports.fechaEsp = fechaEsp
+module.exports.fijarLongitudCadena = fijarLongitudCadena
