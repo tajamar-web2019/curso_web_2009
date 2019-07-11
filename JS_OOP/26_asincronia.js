@@ -1,22 +1,46 @@
 
+const respuestas = [
+    '',
+    ['Esto es un mensaje', 3],
+    ,
+    ['construido a cachitos', 7],
+    ,
+    ,
+    ,
+    ['mediante la lectura secuencial', 8],
+    ['de varios items de un array', ]
+]
+
 
 function leerDatosAsinc(i, timer = 1000, callback) {
-    return setTimeout(
-        () => {
-            let datos
+    setTimeout(() => {
             console.log(`lectura de datos número ${i}`)
-            datos = {data: 'Muchos datos'}
-            callback(datos)
-            leerDatosAsinc(2, 1000, (data) => {
-                console.log(datos.data.toLowerCase())
-            })
-        },
-        timer)
+            callback(respuestas [i])
+        }, timer)
 } 
 
-leerDatosAsinc(
-    1, 2000, (datos) => 
-    console.log(datos.data.toUpperCase())
-)
+let i = 1
+leerDatosAsinc(i, 2000, (aDatos) => {
+    console.log(aDatos[0])
+    i = aDatos[1]
+    leerDatosAsinc(i, 3000, (aDatos) => {
+        console.log(aDatos[0])
+        i = aDatos[1]
+        leerDatosAsinc(i, 2000, (aDatos) => {
+            console.log(aDatos[0])
+            i = aDatos[1]
+            leerDatosAsinc(i, 1000, (aDatos) => {
+                console.log(aDatos[0])    
+            })
+        })
+    }) 
+})
+
+
 console.log('Leyendo los datos')
     
+
+
+
+
+
