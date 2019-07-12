@@ -16,11 +16,30 @@ const Factorial = require("./01_factorial.js")
  *  
  */
 
+const f_1 = new Factorial(1)
 
- const n = 21
- const f_21 = new Factorial(n)   
- console.log(f_21)
+const n = 21
+const f_21 = new Factorial(n)   
+f_21.renderizar()
 
- const n = ''
- const f_21 = new Factorial(n)   
- console.log(f_21)
+try {
+    const e = 'Pepe'
+    const f_Pepe = new Factorial(e) 
+    f_Pepe.renderizar()     
+} catch (error) {
+    console.log(error.message) 
+}
+ 
+new Factorial(70).renderizar()  
+new Factorial(170).renderizar()  
+
+try {
+    new Factorial(171).renderizar() 
+} catch (error) {
+    console.log(error.message) 
+}
+
+
+
+
+
