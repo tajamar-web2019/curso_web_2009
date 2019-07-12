@@ -1,0 +1,15 @@
+{
+  "name": "JS_FInal",
+  "version": "1.0.0",
+  "description": "1 - Inicialización de proyecto npm\r 2 - Instalación de jasmine -D\r 3 - Inicialización de Jasmine",
+  "main": "01_factorial.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.4.0"
+  }
+}
