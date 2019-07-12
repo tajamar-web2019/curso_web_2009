@@ -36,13 +36,26 @@ Variables
 Ámbito
     - global
     - local 
-        - al bloque => let / const
+        - al bloque => let / const (ES6)
         - a la función => var
 
 Constantes
     - Ciclo de vida: declaración + inicialización 
 
-Constantes referenciadas -> es constante la referencia */
+Constantes referenciadas -> es constante la referencia
+
+```JS
+let x = {}
+let y
+y = x // Dos referencias la mismo objeto
+```
+El paso de parametros referenciads 
+solo pas a la referencia
+
+```JS
+function algo(obj) { obj.nombre = 'Pepe'}
+algo(x)
+```
 
 Hoisting de funciones declaradas y variables var (solo la declaración)
 
@@ -87,7 +100,12 @@ Truly
 
 Operadores
 
-Aritméticos: + - * / 
+Asignación: =, +=, ...
+Aritméticos: + - * / % **
+    Unarios: +, -, ++, --
+De bits: ^(XOR)
+Relacionales: == , !=, ===, !==, >, <, <=, >=
+Operadores lógicos: && (y) || (o)
 
 #### Ejercicios ####
 
@@ -99,6 +117,17 @@ Aritméticos: + - * /
     - Testing con jasmine
 
 ### JS Core - continuación ###
+
+Estructuras de control
+
+- if
+    switch / case
+
+- for
+    for (const key in array / object)
+    for (const iterator of array /string) 
+    do / while
+    while
 
 #### Ejercicios ####
 
