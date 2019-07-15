@@ -22,29 +22,29 @@ describe('El factorial de un número (factorial) ', () => {
         expect( f.factorial ).toBe(120)
     })
 
-    it('should throw error if n = 4.3', () =>  {
-        let n = 4.3
-        expect( (() => {
-            new Factorial().bind(null, n)
-        })()
-        ).toThrowError(/entero/);
+    describe('Errores en el cálculo del factorial', () => {
+        it('should throw error if n = 4.3', () =>  {
+            let n = 4.3
+            expect( () => new Factorial(n))
+                .toThrowError(/entero/);
+        });
+
+        it('should throw error if n = -5', () => {
+            let f = new Factorial(1)
+            f.n = -5
+            expect( () => f._preparar().bind(f))
+                .toThrowError(/negativo/)
+        });
+
+        const aErrores = ["pepe", true, false, [], {}, NaN, null, '']
+        
+        aErrores.forEach( (item, i) => {
+            it(`should throw error with no numbers (${i}): ${item}`, () => {
+                expect( () => new Factorial(item))
+                .toThrowError(/no es un número/);
+            }); 
+        })        
     });
 
-    it('should throw error if n = -5', () => {
-        let f = new Factorial(1)
-        f.n = -5
-        expect(f._preparar().bind(null, -5))
-            .toThrowError(/negativo/)
-    });
 
-/* 
-    const aErrores = ["pepe", true, false, [], {}, NaN, null, '']
-     
-    aErrores.forEach( (item, i) => {
-        it(`should throw error with no numbers (${i}): ${item}`, () => {
-            expect(factorial.bind(null, item))
-            .toThrowError(/no es un número/);
-        }); 
-    })
- */
 })
