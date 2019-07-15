@@ -5,6 +5,8 @@ module.exports = class Factorial {
     constructor(n) {
         this.n = n
         this.factorial = 1
+        this.mensaje = ''
+        this.prueba = function() {}
         this._preparar()
         this._calcular()
     }
@@ -40,11 +42,11 @@ module.exports = class Factorial {
 
     renderizar() {
         let cadenaF = (this.factorial < 1e20)
-        ? this.factorial.toLocaleString()
-        : this.factorial.toExponential()
-        let cadena = 
+            ? this.factorial.toLocaleString()
+            : this.factorial.toExponential()
+        this.mensaje = 
 `   El factorial de ${this.n}
     es ${cadenaF}` 
-        console.log(cadena)
+        console.log(this.mensaje)
     }
 }
