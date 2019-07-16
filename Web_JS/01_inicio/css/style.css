@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+header {
+    background-color: brown;
+    color: bisque;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 2rem;
+    min-height: 60vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container div {
+    margin: 1rem;
+}
+.btn:hover {
+    cursor: pointer
+}
+
+.btn-super {
+    background-color: brown;
+    color: bisque;
+    padding: 2rem 2.5rem;
+    border: 2px solid coral;
+}
+
+footer {
+    min-height: 10vh;
+    background-color: brown;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
