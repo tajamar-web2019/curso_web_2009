@@ -8,3 +8,4 @@ console.log(document)
 console.dir(document)
 
 document.querySelector('#btn-super').onclick = saludar
+document.querySelector('#btn-super').title = 'Info desde JS'

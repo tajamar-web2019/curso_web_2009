@@ -1,1 +1,3 @@
-console.log('Cargada app')
+export function app() {
+    console.log('Cargada app') 
+ }
