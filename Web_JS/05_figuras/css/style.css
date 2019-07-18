@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+header {
+    background-color: brown;
+    color: bisque;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 2rem;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+
+}
+
+main h2 {
+    text-align: center;
+}
+
+.figuras-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.figura{
+    width: 30%;
+    min-height: 40vh;
+    background-color: blanchedalmond;
+    border: 5px solid bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangulo {
+    width: 0; 
+    height: 0; 
+    border-bottom: 100px solid maroon;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    cursor: pointer; 
+}
+
+.cuadrado {
+    width: 100px; 
+    height: 100px; 
+    background: maroon;
+    cursor: pointer;
+}
+
+.circulo {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: maroon;
+    cursor: pointer;
+}
+
+.form-group {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group input {
+    background-color: inherit
+}
+
+.output output {
+    padding: 1rem 0rem;
+    border-bottom: 1px solid brown;
+}
+
+footer {
+    min-height: 10vh;
+    background-color: brown;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
