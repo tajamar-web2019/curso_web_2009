@@ -3,7 +3,9 @@ class Figura {
         this.area = 0
         this.nombre = nombre
     }
-    calcularArea() {}
+    calcularArea() {
+        console.log('Calculando')
+    }
 
     render(output = '') {
         output = 
@@ -19,6 +21,7 @@ export class Triangulo extends Figura {
         this.calcularArea()
     }
     calcularArea() {
+        super.calcularArea()
         this.area = (this.base * this.altura)/2
     }
 }
@@ -30,6 +33,7 @@ export class Cuadrado extends Figura {
         this.calcularArea()        
     }
     calcularArea() {
+        super.calcularArea()
         this.area = this.lado * this.lado
     }
 }
@@ -41,6 +45,7 @@ export class Circulo extends Figura {
         this.calcularArea()
     }
     calcularArea() {
+        super.calcularArea()
         this.area = Math.PI * this.radio**2
     }
 }
