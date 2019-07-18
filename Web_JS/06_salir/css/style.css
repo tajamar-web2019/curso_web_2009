@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+header {
+    background-color: brown;
+    color: bisque;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 2rem;
+    min-height: 60vh;
+}
+
+dialog {
+    background-color: bisque;
+    color: brown;
+}
+
+dialog div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+
+footer {
+    min-height: 10vh;
+    background-color: brown;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
