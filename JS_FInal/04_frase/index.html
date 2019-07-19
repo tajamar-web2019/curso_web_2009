@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS en la Web</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="./js/bootstrap.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>Análisis de una frase</h1>
+    </header>
+    <main>
+        <h2>Pulsa la figura para analizar la frase</h2>
+        <p>Haz doble click si quieres una frase ejemplo</p>
+        <div class="wrapper">
+            <div class="btn circulo" id="btn-circulo"></div>
+            <div class="form-group">
+                <input type="text" name="" id="in-frase"
+                placeholder="frase">
+                <i class="btn fas fa-trash-alt" id="btn-borrar"></i>
+            </div>
+            <div class="output">
+                <output id="out-resultado"></output>
+            </div>
+
+            <dialog id="dlg-result">
+                <p>Número de palabras: 
+                    <output id="out-num"></output>
+                </p>
+                <p>Longitud media de las palabras
+                    <output id="out-lm"></output>
+                </p>
+                <p>Número total de letras
+                    <output id="out-tl"></output>
+                </p>
+                   
+                    <!-- this.oNumLetters = this._numLetters()// veces cada letra
+                    this.oFrecLetters = this._fLetters() // frecuencia cada letra -->
+            </dialog>
+        </div>
+    </main>
+    <footer>
+        <address>
+            Alejandro Cerezo
+        </address>
+    </footer>
+</body>
+</html>
