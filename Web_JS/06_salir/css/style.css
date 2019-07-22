@@ -19,6 +19,11 @@ main {
     min-height: 60vh;
 }
 
+section {
+    padding: 2rem;
+}
+
+
 dialog {
     background-color: bisque;
     color: brown;
@@ -30,6 +35,15 @@ dialog div {
     flex-direction: column;
 }
 
+.out-wrapper {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+section.cronos  output {
+    border: 1px solid brown;
+    padding: 0.4rem 2rem;
+}
 
 
 footer {

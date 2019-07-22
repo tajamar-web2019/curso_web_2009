@@ -1,28 +1,34 @@
+import { Crono } from "./crono.js";
+
 export function app() {
     console.log('Cargada app') 
     
     let btnSalir = document.querySelector('#btn-salir')
     let dlgCancelar = document.querySelector('#dlg-cancelar')
     let btnCancelar = document.querySelector('#btn-cancelar')
-    let handler
+    let dlgTime = document.querySelector("#dlg-time")
+    let handlerSalir
+    let handlerInterval
 
     btnSalir.addEventListener('click', onClick)
     btnCancelar.addEventListener('click', onCancel)
 
+    new Crono()
 
     function onClick() {
         let url = 'https://www.google.com/'
-        handler = setTimeout(() => location.assign(url),
-                    4000)
+        handlerSalir = setTimeout(() => location.assign(url),
+                    4800)
         dlgCancelar.showModal()
-        let i = 4000
-        setInterval( () => {
-            console.log(i -= 100)
-        }, 100)
+        dlgTime.value = 5
+        handlerInterval = setInterval( () => {
+            dlgTime.value -= 1
+        }, 1000)
     }
 
     function onCancel() {
-        clearTimeout(handler)
+        clearTimeout(handlerSalir)
+        clearInterval(handlerInterval)
         dlgCancelar.close()
     }
  }
