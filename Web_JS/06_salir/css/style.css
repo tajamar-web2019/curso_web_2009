@@ -40,7 +40,10 @@ dialog div {
     padding-bottom: 1rem;
 }
 
-section.cronos  output {
+.cronos {
+    padding: 1rem 0rem;
+}
+.cronos  output {
     border: 1px solid brown;
     padding: 0.4rem 2rem;
 }
