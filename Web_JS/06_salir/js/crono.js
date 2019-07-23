@@ -15,22 +15,22 @@ export class Crono {
     }
 
     crearCrono(nodo) {
-        let el = document.createElement('div');
-        el.innerHTML = `
-        <div class="cronos" id ="crono-${this.id}">
-            Crono ${this.id}
-            <output>0</output>
+        let el = document.createElement('div')
+        el.className = 'cronos'
+        el.setAttribute('id', `crono-${this.id}`) 
+        el.innerHTML = `Crono ${this.id}
+            <output>0 : 0 : 0</output>
             <button id="btn-toggle-${this.id}">Play</button>
-            <button id="btn-reset-${this.id}">Reset</button>
-        </div>
-        `
+            <button id="btn-reset-${this.id}">Reset</button>`
         console.log(el)
         nodo.appendChild(el)
     }
 
     /**
         Preserves existing references to DOM elements when appending elements
-        When you append to (or otherwise modify) innerHTML, all the DOM nodes inside that element have to be re-parsed and recreated. If you saved any references to nodes, they will be essentially useless, because they aren't the ones that show up anymore.
+        When you append to (or otherwise modify) innerHTML, 
+        all the DOM nodes inside that element have to be 
+        re-parsed and recreated. If you saved any references to nodes, they will be essentially useless, because they aren't the ones that show up anymore.
 
         Preserves event handlers attached to any DOM elements
         This is really just a special case (although common) of the last one. Setting innerHTML will not automatically reattach event handlers to the new elements it creates, so you would have to keep track of them yourself and add them manually. 
@@ -57,9 +57,11 @@ export class Crono {
 
     play() {
         this.handle = setInterval( () => {
-            this.time += 1
+            this.time += 10
             this.render()
-        }, 1)
+        }, 10)
+        // The intervals (in milliseconds) on how often to execute the code. 
+        // If the value is less than 10, the value 10 is used
     }
 
     pause() {
@@ -73,8 +75,10 @@ export class Crono {
 
     render() {
         let minutos =  parseInt(this.time / (1000 * 60))
-        let segundos = parseInt( (this.time % (1000 * 60)) / 1000) 
-        let centesimas = parseInt ( ((this.time % (1000 * 60)) % 1000) / 10 )
+        let milesimasRestantes = this.time % (1000 * 60)
+        let segundos = parseInt(milesimasRestantes / 1000) 
+        milesimasRestantes = milesimasRestantes % 1000
+        let centesimas = parseInt (milesimasRestantes / 10)
         this.output.value = 
           ` ${minutos} : ${segundos} : ${centesimas}`
         

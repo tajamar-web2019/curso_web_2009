@@ -18,7 +18,7 @@ export function app() {
     aCronos.forEach( idCrono => { 
         new Crono(idCrono, wrapperCronos)
     })
-    wrapperCronos.innerHTML += `<p>Creados los cronómetros</p>`
+    // wrapperCronos.innerHTML += `<p>Creados los cronómetros</p>`
 
     function onClick() {
         let url = 'https://www.google.com/'
