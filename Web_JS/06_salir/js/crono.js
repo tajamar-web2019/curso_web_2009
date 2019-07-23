@@ -16,7 +16,7 @@ export class Crono {
 
     crearCrono(nodo) {
         let el = document.createElement('div');
-        el.outterHTML = `
+        el.innerHTML = `
         <div class="cronos" id ="crono-${this.id}">
             Crono ${this.id}
             <output>0</output>
@@ -24,6 +24,7 @@ export class Crono {
             <button id="btn-reset-${this.id}">Reset</button>
         </div>
         `
+        console.log(el)
         nodo.appendChild(el)
     }
 
