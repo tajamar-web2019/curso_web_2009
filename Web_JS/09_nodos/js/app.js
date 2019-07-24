@@ -64,6 +64,27 @@ export function app() {
 
 {
     // Creacion de Nodos
+    let origen = document.querySelector('.addNodos div')
+    console.dir(origen)
+    let txtHTML = '<p>Creado desde JS</p>'
+    origen.innerHTML = txtHTML
+
+    let html = document.createElement('p')
+    //let content = document.createTextNode('Creado desde JS como nodo')
+    //html.appendChild(content)
+    html.textContent = 'Creado desde JS como nodo'
+    console.log(html)
+    console.dir(html)
+    origen.appendChild(html)
+
+    let aside = document.createElement('aside')
+    aside.innerHTML = '<h2>Más info</h2>'
+    // .....
+    aside.innerHTML += '<p>Aquí va la info</p>'
+
+    // origen.innerHTML += aside No funciona
+    origen.appendChild(aside)
+
 }
 
 }

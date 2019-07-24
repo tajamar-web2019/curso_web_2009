@@ -1,5 +1,5 @@
 export function exit(ev) {
-    let confirmationMessage = "\o/";
+    let confirmationMessage = '';
     console.log('Cerrando página');
     ev.preventDefault()
     ev.returnValue = confirmationMessage;     // Gecko, Trident, Chrome 34+
