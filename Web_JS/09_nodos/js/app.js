@@ -44,4 +44,26 @@ export function app() {
             lista.outerHTML = '<p>Opps!!. No existo</p>'
         }
     }
- }
+ 
+{
+
+    document.getElementsByTagName('p')
+    document.querySelectorAll('p')
+
+    document.getElementsByName('user')
+    document.querySelectorAll('[name="user"]')
+
+    document.getElementsByClassName('clase1')
+    document.querySelectorAll('.clase1')
+
+    document.getElementById('id1')
+    document.querySelector('#id1')
+
+    /* document.getElementsByTagNameNS */
+}
+
+{
+    // Creacion de Nodos
+}
+
+}
