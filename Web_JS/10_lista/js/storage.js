@@ -3,7 +3,7 @@ export class ArrayStorage {
         this.name = name
     }
 
-    set(data) {
+    set(data = []) {
         localStorage.setItem(this.name,
             JSON.stringify(data))
     }

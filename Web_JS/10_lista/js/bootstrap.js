@@ -1,5 +1,3 @@
-import { App } from './app.js'
+import { app } from './app.js'
 
-document.addEventListener('DOMContentLoaded', () => {
-    new App()
-})
+document.addEventListener('DOMContentLoaded', app())

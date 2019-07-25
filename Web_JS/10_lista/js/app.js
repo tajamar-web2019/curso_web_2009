@@ -1,37 +1,43 @@
-import { ArrayStorage } from './storage.js'
+export function app() {
 
-export class App {
+    // Existe un input #in-new
+    // Existe un elemento #out-lista
+      
+    // Nodos
+    let inAnimal = document.querySelector('#in-new')
+    let outAnimal = document.querySelector('#out-lista')
 
-    constructor() {
-        console.log('Cargada app') 
-        this.setAnimales = new Set()
+    // Asignar manejador de eventos
+    inAnimal.addEventListener('change', addAnimal)
 
-        this.store = new ArrayStorage('animales')
-
-        this.inNew = document.querySelector('#in-new')
-        this.outLista = document.querySelector('#out-lista')
-
-        this.inNew.addEventListener('change',
-            this.onChange.bind(this))
-
+    // Crear e inicializar el array
+    let animales = [] 
+    // ¿Existe storage?
+    if(localStorage.getItem('zoo')) {
+        animales = JSON.parse(localStorage.getItem('zoo'))
+        render()
     }
     
-    render() {
-        let txtHtml = ''
-        this.setAnimales.forEach( animal =>
-            txtHtml += `<li>${animal}</li>`)
-        console.log(txtHtml)    
-        let nodoLista = document.createElement('ul')
-        nodoLista.innerHTML = txtHtml
-        this.outLista.innerHTML = ''
-        this.outLista.appendChild(nodoLista)
-    }
+    // let animales = (localStorage.getItem(animales)) ?
+    //        localStorage.getItem(animales) : [] 
 
-    onChange() {
-        if (this.inNew) {
-            this.setAnimales.add(this.inNew.value)
-            this.inNew.value = ''
-            this.render()
-        }
+    // Funciones
+    function addAnimal() {
+        animales.push(inAnimal.value)
+        localStorage.setItem('zoo', JSON.stringify(animales))
+        console.log(JSON.stringify(animales))
+        inAnimal.value = ''
+        render()
     }
- }
+    
+    function render() {
+        let html = '' 
+        html += '<ul>'
+        animales.forEach(item => html += `<li>${item}</li>`)
+        html += '</ul>'
+        outAnimal.innerHTML = html
+    }
+}
+
+
+
