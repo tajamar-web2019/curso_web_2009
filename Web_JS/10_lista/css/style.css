@@ -23,6 +23,12 @@ main {
     cursor: pointer;
 }
 
+.confirmacion {
+    color: brown;
+    background-color: bisque;
+    text-align: center;
+}
+
 li {
     padding-top: 0.2rem;
     padding-bottom: 0.2rem

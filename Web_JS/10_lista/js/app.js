@@ -6,9 +6,14 @@ export function app() {
     // Nodos
     let inAnimal = document.querySelector('#in-new')
     let outAnimal = document.querySelector('#out-lista')
+    let dlgConfirmar = document.querySelector('.confirmacion')
+    let aDlgBotones = document.querySelectorAll('.confirmacion button')
 
     // Asignar manejador de eventos
     inAnimal.addEventListener('change', addAnimal)
+    aDlgBotones.forEach(btn => 
+        btn.addEventListener('click', onClickDlg))
+
 
     // Crear e inicializar el array
     let animales = [] 
@@ -18,6 +23,9 @@ export function app() {
         render()
     }
     
+    // Elemento a Bornar
+    let numBorrar
+
     // let animales = (localStorage.getItem(animales)) ?
     //        localStorage.getItem(animales) : [] 
 
@@ -55,11 +63,18 @@ export function app() {
     }
 
     function onBorrar(ev) {
-        console.log(ev.target.dataset.id)
-        animales.splice(ev.target.dataset.id, 1)
+        numBorrar = ev.target.dataset.id
+        dlgConfirmar.showModal()
+    }
+
+   function onClickDlg (ev) {
+       if (ev.target.textContent === 'SI') {
+        animales.splice(numBorrar, 1)
         save()
-        render()
-   }
+        render()     
+       }
+       dlgConfirmar.close()
+   }   
 
    function onEditar(ev) {
     console.log(ev.target.dataset.id)
@@ -74,6 +89,9 @@ export function app() {
     save()
     render()
    }
+
+
+
 }
 
 
