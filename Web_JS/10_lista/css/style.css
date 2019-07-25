@@ -18,6 +18,16 @@ main {
     margin: 2rem;
     min-height: 60vh;
 }
+
+.btn {
+    cursor: pointer;
+}
+
+li {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem
+}
+
 footer {
     min-height: 10vh;
     background-color: brown;

@@ -1,4 +1,4 @@
-import { App } from './app.js'
+import { App } from './app2.js'
 
 document.addEventListener('DOMContentLoaded', () => {
     new App()
