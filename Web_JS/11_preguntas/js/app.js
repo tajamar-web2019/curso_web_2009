@@ -54,4 +54,14 @@ export function app() {
         ev.target.nextElementSibling.classList.toggle('oculto')
     }
     
+
+    /** Seccion boton */
+
+    let superBoton = document.querySelector('.super-boton')
+    superBoton.addEventListener('mouseover', onMouse)
+    superBoton.addEventListener('mouseout', onMouse)
+
+    function onMouse() {
+        superBoton.classList.toggle('hover-boton')
+    }
  }
