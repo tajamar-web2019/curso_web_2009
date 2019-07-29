@@ -8,7 +8,7 @@ body {
 body>header {
     background-color: brown;
     color: bisque;
-    min-height: 20vh;
+    min-height: 30vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -27,6 +27,13 @@ body>header h1{
     top: 0;
     left: 0;
     right: 0; 
+    padding-bottom: 0.5rem;
+}
+
+.logo {
+    font-size: 5rem;
+    display: inline-block;
+    padding: 1rem;
 }
 
 .top-sticky {
@@ -47,12 +54,13 @@ nav ul {
 
 nav li {
     display: block;
-    padding: 0.5rem;
+    padding: 0.1rem;
 }
 
 nav a {
     text-decoration: none;
     color: inherit;
+    padding: 0.4rem;
 }
 
 .active {
