@@ -72,6 +72,34 @@ main {
     margin: 2rem;
     min-height: 200vh;
 }
+
+.img-wrapper {
+    max-width: 60%;
+    float: left;
+    padding: 0.5rem 1rem;
+}
+
+.img-wrapper-left {
+    float: left;
+}
+
+.img-wrapper-right {
+    float: right;
+}
+
+.img-wrapper img {
+    width: 100%;
+}
+
+.dlg-img {
+    height: 90%;
+}
+
+.dlg-img img {
+    width: 95%;
+}
+
+
 footer {
     min-height: 10vh;
     background-color: brown;

@@ -1,6 +1,16 @@
+import ARBOLES from './imagenes.json.js'
+
 export function app() {
     console.log('Cargada app') 
 
+    let aImagenes = ARBOLES.map( item => {
+        const img = new Image()
+        img.alt = item.nombre
+        img.src = './assets/' + item.source
+        return img
+    })
+
+    console.log(aImagenes)
     window.addEventListener('scroll', onScroll)
     window.addEventListener('resize', calcularOffset )
     
@@ -14,6 +24,23 @@ export function app() {
     aEnlaces.forEach((enlace, i) => enlace.addEventListener(
         'click', (ev) => {onClickMenu(ev, i) }
     ))
+
+    let aImgWrappers = document.querySelectorAll('.img-wrapper')
+    aImgWrappers.forEach( (item, i) => {
+        if (i%2) {
+            item.classList.add('img-wrapper-left')
+        } else {
+            item.classList.add('img-wrapper-right')
+        }
+        item.appendChild(aImagenes[i])
+        item.addEventListener('click', () => {onClickImg (i)}
+        )
+    })
+
+    let dlgImg = document.querySelector('#dlg-img')
+    let dlgBtn = document.querySelector('#dlg-img button')
+
+    dlgBtn.addEventListener('click', onClickClose)
 
     function calcularOffset () {
         aOffsets = []
@@ -30,11 +57,14 @@ export function app() {
         //console.log(y)
         if (y >= 40 && !isSticky) {
             header.classList.add('sticky')
+            // header.firstChild.firstChild
+            header.children[0].children[0].classList.remove('logo')
             divTop.classList.add('top-sticky')
             isSticky = !isSticky
             calcularOffset()
         } else if (y < 40 && isSticky ) {
             header.classList.remove('sticky')
+            header.children[0].children[0].classList.add('logo')
             divTop.classList.remove('top-sticky')
             calcularOffset()
             isSticky = !isSticky
@@ -86,5 +116,18 @@ export function app() {
             enlace.classList.remove('active')
         )
         aEnlaces[i].classList.add('active')
+    }
+
+    function onClickImg(i) {
+        dlgImg.showModal()
+        if (dlgImg.children[1]) {
+             dlgImg.removeChild(dlgImg.children[1])
+        }
+        dlgImg.appendChild(          
+            aImagenes[i].cloneNode())
+    }
+
+    function onClickClose() {
+        dlgImg.close()
     }
  }
