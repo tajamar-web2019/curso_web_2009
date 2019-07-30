@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS en la Web</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./favicon.ico">
+    <script src="./js/bootstrap.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>JS en la Web</h1>
+    </header>
+    <main>
+        <form name="complete-post" method="POST"
+            action="https://jsonplaceholder.typicode.com/users">
+            <fieldset id="datos_personales">
+                <legend>Datos personales</legend>
+                <label for="userName" class="form_label">
+                    Nombre de usuario</label>
+                <input type="text" name="userName" id="userName" required
+                    class="form_control" placeholder="Dime tu nombre y apellidos">
+                <label for="userPasswd" class="form_label">
+                    Contraseña. <span title=" 1.) at least 1 upper case character 2.) at least 1 lower case character 3.) at least 1 numerical character 4.) at least 1 special character">Ver formato</span></label>  
+                <input type="password" name="userPasswd" id="userPasswd" required 
+                pattern="(?=^.{6,255}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*"
+                class="form_control" placeholder="Dime tu password">
+                <label for="email" class="form_label">Correo</label>
+                <input type="email" name="email" id="email" required
+                    class="form_control" placeholder="Escribe un correo electrónico válido" value="@tajamar.es">
+                <label for="cv" class="form_label">Formación</label>
+                <input type="text" name="cv" id="cv" list="formacion" class="form_control"
+                    placeholder="Selecciona o indica tus estudios">
+                <datalist id="formacion">
+                    <option>Graduado</option>
+                    <option>Licenciado</option>
+                    <option>Doctor</option>
+                </datalist>
+                <label for="birthDate" class="form_label">Fecha de nacimiento</label>
+                <input type="date" name="birthDate" id="birthDate" class="form_control">      
+                <label for="info" class="form_label">
+                    Más información</label>
+                <textarea name="info" id="info" rows="5"
+                    placeholder="Más información" 
+                    class="form_control"></textarea>                 
+            </fieldset>
+            <fieldset id="condiciones">
+                <legend>Condiciones</legend>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum animi non perspiciatis ut excepturi dolores obcaecati ullam dignissimos. Error incidunt corrupti debitis totam ea similique ab soluta hic id pariatur.</p>
+                <input type="checkbox" name="isOk" id="isOk" required>
+                <label for="isOk">Estoy deacuerdo con las condiciones</label>
+            </fieldset>
+            <fieldset id="datos_curso">
+                <legend>Datos del curso</legend>
+                <label for="curso" class="form_label">Curso</label>
+                <!-- <select name="curso" id="curso" class="form_control" multiple size="8"> -->
+                <select name="curso" id="curso" class="form_control" required> 
+                    <option value="">Elige un valor</option>
+                    <optgroup label="Desarrollo Front">
+                        <option value="HTML-01">HTML5</option>
+                        <option value="CSS-02">CSS3</option>
+                        <option value="JS-03">JavaScript</option>                                
+                    </optgroup>
+                    <optgroup label="Programación Back">
+                        <option value="Node-04">Node JS</option>
+                        <option value="PHP-05">PHP</option>
+                    </optgroup>
+                </select>
+                <label class="form_label">Ubicaciones</label>
+                <div class="radio_wrapper">
+                    <input type="radio" name="sitio" id="madrid" value="MD" required>
+                    <label for="madrid">Madrid</label>
+                    <input type="radio" name="sitio" id="sevilla" value="SV"> 
+                    <label for="sevilla">Sevilla</label>
+                    <input type="radio" name="sitio" id="barna" value="BN">
+                    <label for="barna">Barcelona</label> 
+                </div>
+            </fieldset>
+            <input type="submit" value="Enviar">
+            <button type="submit">
+                Enviar <i class="fas fa-paper-plane"></i>
+            </button>
+            <input type="reset" value="Borrar">
+            <button type="reset">
+                Borrar <i class="fas fa-eraser"></i>
+            </button>
+            <button type="button">Sin uso</button>
+        </form>
+    </main>
+    <footer>
+        <address>
+            Alejandro Cerezo
+        </address>
+    </footer>
+</body>
+</html>
