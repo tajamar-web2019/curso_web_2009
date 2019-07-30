@@ -21,18 +21,18 @@
                 <legend>Datos personales</legend>
                 <label for="userName" class="form_label">
                     Nombre de usuario</label>
-                <input type="text" name="userName" id="userName" required
-                    class="form_control" placeholder="Dime tu nombre y apellidos">
+                <input type="text" name="userName" id="userName" required minlength="3"
+                    class="form_control form_data" placeholder="Dime tu nombre y apellidos">
                 <label for="userPasswd" class="form_label">
                     Contraseña. <span title=" 1.) at least 1 upper case character 2.) at least 1 lower case character 3.) at least 1 numerical character 4.) at least 1 special character">Ver formato</span></label>  
                 <input type="password" name="userPasswd" id="userPasswd" required 
                 pattern="(?=^.{6,255}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*"
-                class="form_control" placeholder="Dime tu password">
+                class="form_control form_data" placeholder="Dime tu password">
                 <label for="email" class="form_label">Correo</label>
                 <input type="email" name="email" id="email" required
-                    class="form_control" placeholder="Escribe un correo electrónico válido" value="@tajamar.es">
+                    class="form_control form_data" placeholder="Escribe un correo electrónico válido" value="@tajamar.es">
                 <label for="cv" class="form_label">Formación</label>
-                <input type="text" name="cv" id="cv" list="formacion" class="form_control"
+                <input type="text" name="cv" id="cv" list="formacion" class="form_control form_data"
                     placeholder="Selecciona o indica tus estudios">
                 <datalist id="formacion">
                     <option>Graduado</option>
@@ -40,12 +40,12 @@
                     <option>Doctor</option>
                 </datalist>
                 <label for="birthDate" class="form_label">Fecha de nacimiento</label>
-                <input type="date" name="birthDate" id="birthDate" class="form_control">      
+                <input type="date" name="birthDate" id="birthDate" class="form_control form_data">      
                 <label for="info" class="form_label">
                     Más información</label>
                 <textarea name="info" id="info" rows="5"
                     placeholder="Más información" 
-                    class="form_control"></textarea>                 
+                    class="form_control form_data"></textarea>                 
             </fieldset>
             <fieldset id="condiciones">
                 <legend>Condiciones</legend>
@@ -79,16 +79,21 @@
                     <label for="barna">Barcelona</label> 
                 </div>
             </fieldset>
-            <input type="submit" value="Enviar">
             <button type="submit">
                 Enviar <i class="fas fa-paper-plane"></i>
             </button>
-            <input type="reset" value="Borrar">
-            <button type="reset">
+            <button id="btnReset" type="reset">
                 Borrar <i class="fas fa-eraser"></i>
             </button>
-            <button type="button">Sin uso</button>
         </form>
+        <dialog class="dlg-confirm" id="dlg-confirm">
+            <h3>¿Desea enviar estos datos?</h3>
+            <ul></ul>
+            <div>
+                <button>Si</button>
+                <button>No</button>
+            </div>
+        </dialog>
     </main>
     <footer>
         <address>

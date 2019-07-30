@@ -72,3 +72,16 @@ fieldset {
     margin-bottom: 1rem;
     border-color: bisque;
 }
+
+.dlg-confirm {
+    color: brown;
+    background-color: bisque;
+}
+
+.dlg-confirm ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
