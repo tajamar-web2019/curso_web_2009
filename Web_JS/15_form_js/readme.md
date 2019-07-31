@@ -22,7 +22,7 @@ Propiedades
 Métodos
 
 - checkValidity()
--setCustomValidity(message)
+- setCustomValidity(message)
 - HTMLFormElement.reportValidity()
 
 ValidytyState

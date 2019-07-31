@@ -22,14 +22,14 @@ export function validacionFinal(nodos) {
     let r = false
     nodos.some(nodo => {
         if( !nodo.checkValidity()) {
-            nodo.nextElementSibling.innerHTML = 
+            nodo.parentNode.nextElementSibling.innerHTML = 
                 nodo.validationMessage
-            nodo.nextElementSibling.hidden = false
+            nodo.parentNode.nextElementSibling.hidden = false
             r = false  
             return true  
         } else {
             r = true
-            nodo.nextElementSibling.hidden = true
+            nodo.parentNode.nextElementSibling.hidden = true
         }
     });
 

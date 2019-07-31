@@ -87,5 +87,8 @@ fieldset {
 .error {
     color: brown;
     font-size: 0.8rem;
+    background-color: bisque;
+    padding: 1rem;
+    border: 1px solid;
 }
 

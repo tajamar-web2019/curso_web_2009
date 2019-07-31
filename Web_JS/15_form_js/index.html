@@ -19,20 +19,29 @@
             action="https://jsonplaceholder.typicode.com/users">
             <fieldset id="datos_personales">
                 <legend>Datos personales</legend>
-                <label for="userName" class="form_label">
-                    Nombre de usuario</label>
-                <input type="text" name="userName" id="userName" 
-                        required minlength="3"
-                    class="form_control form_data" placeholder="Dime tu nombre y apellidos">
+                <div>
+                    <label for="userName" class="form_label">
+                        Nombre de usuario</label>
+                    <input type="text" name="userName" id="userName" 
+                            required minlength="3"
+                        class="form_control form_data" placeholder="Dime tu nombre y apellidos">                    
+                </div>  
                 <p class="error" hidden></p>
-                <label for="userPasswd" class="form_label">
-                    Contraseña. <span title=" 1.) at least 1 upper case character 2.) at least 1 lower case character 3.) at least 1 numerical character 4.) at least 1 special character">Ver formato</span></label>  
-                <input type="password" name="userPasswd" id="userPasswd" required 
-                pattern="(?=^.{6,255}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*"
-                class="form_control form_data" placeholder="Dime tu password">
-                <label for="email" class="form_label">Correo</label>
-                <input type="email" name="email" id="email" required
-                    class="form_control form_data" placeholder="Escribe un correo electrónico válido" value="@tajamar.es">
+                <div>
+                    <label for="userPasswd" class="form_label">
+                        Contraseña. <span title=" 1.) at least 1 upper case character 2.) at least 1 lower case character 3.) at least 1 numerical character 4.) at least 1 special character">Ver formato</span></label>  
+                    <input type="password" name="userPasswd" id="userPasswd" required 
+                    pattern="(?=^.{6,255}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*"
+                    class="form_control form_data" placeholder="Dime tu password">                    
+                </div>
+                <p class="error" hidden></p>
+                <div>
+                    <label for="email" class="form_label">Correo</label>                    
+                    <input type="email" name="email" id="email" required
+                        class="form_control form_data" 
+                        placeholder="Escribe un correo electrónico válido" value="@tajamar.es"> 
+                </div>
+                <p class="error" hidden></p>
                 <label for="cv" class="form_label">Formación</label>
                 <input type="text" name="cv" id="cv" list="formacion" class="form_control form_data"
                     placeholder="Selecciona o indica tus estudios">
@@ -52,25 +61,31 @@
             <fieldset id="condiciones">
                 <legend>Condiciones</legend>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum animi non perspiciatis ut excepturi dolores obcaecati ullam dignissimos. Error incidunt corrupti debitis totam ea similique ab soluta hic id pariatur.</p>
-                <input type="checkbox" name="isOk" id="isOk" required>
-                <label for="isOk">Estoy deacuerdo con las condiciones</label>
+                <div>
+                    <input type="checkbox" name="isOk" id="isOk" required>
+                    <label for="isOk">Estoy deacuerdo con las condiciones</label>                    
+                </div>
+                <p class="error" hidden></p>
             </fieldset>
             <fieldset id="datos_curso">
                 <legend>Datos del curso</legend>
-                <label for="curso" class="form_label">Curso</label>
-                <!-- <select name="curso" id="curso" class="form_control" multiple size="8"> -->
-                <select name="curso" id="curso" class="form_control" required> 
-                    <option value="">Elige un valor</option>
-                    <optgroup label="Desarrollo Front">
-                        <option value="HTML-01">HTML5</option>
-                        <option value="CSS-02">CSS3</option>
-                        <option value="JS-03">JavaScript</option>                                
-                    </optgroup>
-                    <optgroup label="Programación Back">
-                        <option value="Node-04">Node JS</option>
-                        <option value="PHP-05">PHP</option>
-                    </optgroup>
-                </select>
+                <div>
+                    <label for="curso" class="form_label">Curso</label>
+                    <!-- <select name="curso" id="curso" class="form_control" multiple size="8"> -->
+                    <select name="curso" id="curso" class="form_control" required> 
+                        <option value="">Elige un valor</option>
+                        <optgroup label="Desarrollo Front">
+                            <option value="HTML-01">HTML5</option>
+                            <option value="CSS-02">CSS3</option>
+                            <option value="JS-03">JavaScript</option>                                
+                        </optgroup>
+                        <optgroup label="Programación Back">
+                            <option value="Node-04">Node JS</option>
+                            <option value="PHP-05">PHP</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <p class="error" hidden></p>
                 <label class="form_label">Ubicaciones</label>
                 <div class="radio_wrapper">
                     <input type="radio" name="sitio" id="madrid" value="MD" required>
@@ -80,6 +95,7 @@
                     <input type="radio" name="sitio" id="barna" value="BN">
                     <label for="barna">Barcelona</label> 
                 </div>
+                <p class="error" hidden></p>
             </fieldset>
             <button type="submit">
                 Enviar <i class="fas fa-paper-plane"></i>
