@@ -1,3 +1,5 @@
+import { comprobarDNI } from './helper.js'
+
 export function validacion() {
 
     let userName = document.querySelector('#userName')
@@ -21,6 +23,12 @@ export function validacionFinal(nodos) {
     console.dir(nodos)
     let r = false
     nodos.some(nodo => {
+        if (nodo.name === 'dni') { // nodo del dni
+            nodo.setCustomValidity('')
+            if (nodo.value && !comprobarDNI(nodo.value)) {
+                nodo.setCustomValidity('Letra del DNI incorrecta') 
+            }    
+        }
         if( !nodo.checkValidity()) {
             nodo.parentNode.nextElementSibling.innerHTML = 
                 nodo.validationMessage

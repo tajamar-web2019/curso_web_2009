@@ -31,6 +31,10 @@
                 <label for="email" class="form_label">Correo</label>
                 <input type="email" name="email" id="email" required
                     class="form_control form_data" placeholder="Escribe un correo electrónico válido" value="@tajamar.es">
+                <label for="dni" class="form_label">DNI</label>
+                <input type="dni" name="dni" id="dni" required
+                    class="form_control form_data" maxlength="9"
+                    placeholder="Escribe tu DNI incluida la letra">
                 <label for="cv" class="form_label">Formación</label>
                 <input type="text" name="cv" id="cv" list="formacion" class="form_control form_data"
                     placeholder="Selecciona o indica tus estudios">
@@ -79,7 +83,7 @@
                     <label for="barna">Barcelona</label> 
                 </div>
             </fieldset>
-            <button type="submit">
+            <button id="btnSubmit" type="submit">
                 Enviar <i class="fas fa-paper-plane"></i>
             </button>
             <button id="btnReset" type="reset">

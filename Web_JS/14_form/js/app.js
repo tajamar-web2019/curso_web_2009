@@ -1,24 +1,29 @@
+
+import { comprobarDNI } from './helper.js'
+
 export function app() {
     console.log('Cargada app') 
 
-    // Variables
+    // Variable
 
     let oDatos =  {
         userName: '',
         userPasswd: '',
         email: '',
+        dni: '',
         cv: '',
         birthDate: '',
         info: '',
         isOk: 'on',
         curso: '',
-        sitio: '',    
+        sitio: ''
     }
 
     let oDatosPretty =  {
         userName: 'Nombre de Usuario',
         userPasswd: 'Contraseña',
         email: 'Correo electrónico',
+        dni: 'D.N.I.',
         cv: 'Formación',
         birthDate: 'Fecha de nacimiento',
         info: 'Más información',
@@ -29,7 +34,8 @@ export function app() {
 
     // Nodos del DOM
     let form = document.querySelector('[name="complete-post"]')
-    let btnReseet = document.querySelector('#btnReset')
+    let btnSubmit = document.querySelector('#btnSubmit')
+    let btnReset = document.querySelector('#btnReset')
     let aFormData = document.querySelectorAll('.form_data')
     let aCheckBox = document.querySelectorAll('[type="checkbox"]')
     let aSelects = document.querySelectorAll('select')
@@ -39,7 +45,8 @@ export function app() {
 
     // Definir manejadores
     form.addEventListener('submit', onSubmit)
-    btnReseet.addEventListener('click', onReset)
+    btnSubmit.addEventListener('click', onClickSubmit)
+    btnReset.addEventListener('click', onReset)
     aDlgButtons.forEach(btn => btn.addEventListener('click', onClickDlg))
 
     // Funciones manejadoras de eventos
@@ -52,6 +59,18 @@ export function app() {
         aSelects.forEach(item => oDatos[item.name] = item.value)
         oDatos.sitio = getRadio(aRadioSitio)
         renderModal()
+    }
+
+    function onClickSubmit() {
+        dniValidate()
+    }
+
+    function dniValidate() {
+        aFormData[3].setCustomValidity('')
+        if (aFormData[3].value && !comprobarDNI(aFormData[3].value)) {
+            aFormData[3].setCustomValidity('Letra del DNI incorrecta') 
+        }    
+       //console.dir(aFormData[3])        
     }
 
     function onReset(ev) {}
