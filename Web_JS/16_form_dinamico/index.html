@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS en la Web</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./favicon.ico">
+    <script src="./js/bootstrap.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>JS en la Web</h1>
+    </header>
+    <main>
+        <form action="">
+            <fieldset>
+                <legend>Datos del curso</legend>
+                <div>
+                    <label for="techs" class="form_label">Tecnologías</label>
+                    <!-- <select name="techs" id="techs" class="form_control" multiple size="8"> -->
+                    <select name="techs" id="techs" class="form_control" required> 
+                        <option value="">Elige una tecnologia</option>
+                        <option value="F">Desarrollo Front</option>
+                        <option value="B">Programación Back</option>
+                    </select>
+                </div>
+                <p class="error" hidden></p>   
+                <div>
+                    <label for="curso" class="form_label">Curso</label>
+                    <!-- <select name="curso" id="curso" class="form_control" multiple size="8"> -->
+                    <select name="curso" id="curso" 
+                    class="form_control" disabled required> 
+                        <option value="">Elige un curso</option>
+                    </select>
+                </div>
+                <p class="error" hidden></p>               
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <address>
+            Alejandro Cerezo
+        </address>
+    </footer>
+</body>
+</html>

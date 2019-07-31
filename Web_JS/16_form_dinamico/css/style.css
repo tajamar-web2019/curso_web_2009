@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+header {
+    background-color: brown;
+    color: bisque;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 2rem;
+    min-height: 60vh;
+}
+footer {
+    min-height: 10vh;
+    background-color: brown;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form_control {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding-top: 0.7rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.radio_wrapper {
+    padding-top: 0.7rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.placeholder {
+    color: brown;
+    background-color: bisque;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+.form_control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: brown;
+    opacity: 1; /* Firefox */
+  }
+  
+  .form_control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: brown;
+  }
+  
+  .form_control::-ms-input-placeholder { /* Microsoft Edge */
+    color: brown;
+  }
+
+.form_label {
+    display: block;
+    margin-top: 1rem;
+}
+
+fieldset {
+    margin-bottom: 1rem;
+    border-color: bisque;
+}
+
+.dlg-confirm {
+    color: brown;
+    background-color: bisque;
+}
+
+.dlg-confirm ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.error {
+    color: brown;
+    font-size: 0.8rem;
+    background-color: bisque;
+    padding: 1rem;
+    border: 1px solid;
+}
