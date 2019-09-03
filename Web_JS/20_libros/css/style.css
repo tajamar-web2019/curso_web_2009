@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+header {
+    background-color: brown;
+    color: bisque;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 2rem;
+    min-height: 60vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.libros {
+    margin: 1rem 0rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: bisque
+}
+
+.autor {
+    color: brown;
+}
+
+.title {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+footer {
+    min-height: 10vh;
+    background-color: brown;
+    color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
