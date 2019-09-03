@@ -26,19 +26,30 @@ export function app() {
 
 
     function leerDatos(http) {
-        if (http.readyState == 4 && http.status == 200) {
+        /* if (http.readyState == 4 && http.status == 200) {
             let data = JSON.parse(http.responseText) 
                 spanSaludo.innerHTML =  data.username
-        } else {
+        } else if (http.readyState == 4) {
 
             spanSaludo.innerHTML = ', datos no encontrados'
             //location.assign('./error.html')
+        } */
+
+        if (http.readyState == 4) {
+            if (http.status == 200) {
+                let data = JSON.parse(http.responseText) 
+                    spanSaludo.innerHTML =  data.username
+            } else {
+                //spanSaludo.innerHTML = ', datos no encontrados'
+                location.assign('./error.html')
+            }
         }
     }
 
     function ajax(metodo, url, callback) {
         const http = new XMLHttpRequest()
-        http.addEventListener('readystatechange', () => { callback(http) })
+        http.addEventListener('readystatechange', 
+            () => { callback(http) })
         http.open(metodo, url)
         http.send() 
     }
