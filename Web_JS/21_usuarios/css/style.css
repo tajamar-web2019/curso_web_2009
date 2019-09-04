@@ -47,6 +47,12 @@ main {
     text-decoration: underline;
 }
 
+.boton {
+    color: rgba(165, 42, 42, 0.575);
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
 footer {
     min-height: 10vh;
     background-color: brown;
@@ -54,4 +60,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+dialog {
+    background-color: brown;
+    color: bisque;
+}
+
+dialog div {
+    margin: 0.8rem 0rem;
 }

@@ -7,6 +7,7 @@
     <title>Curso de JS</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="./js/bootstrap.js" type="module"></script>
 </head>
 <body>
@@ -22,15 +23,48 @@
                 placeholder="Escribe tu edad" value=''>
             <button id="btn-add" type="button">Añadir</button>            
         </div>
+        <dialog id="dlg-borrar">
+            <h3>Borrar registro</h3>
+            <div>
+                <label for="out-nombre-editar">Nombre</label>
+                <output id="out-nombre-editar">
+            </div>
+            <div>
+                <label for="out-edad-editar">Edad</label>
+                <output id="out-edad-editar">   
+            </div>
+            <div>
+                <button id="btn-borrar" type="button">Confirmar</button>
+                <button id="btn-cancel-borrar" type="button">Cancelar</button>                
+            </div>
+        </dialog>
+        <dialog id="dlg-editar">
+            <h3>Editar Registro</h3>
+            <div>
+                <label for="in-nombre-editar">Nombre</label>
+                <input type="text" name="in-nombre" id="in-nombre-editar">
+            </div>
+            <div>
+                <label for="in-edad-editar">Edad</label>
+                <input type="text" name="in-edad" id="in-edad-editar">   
+            </div>
+            <div>
+                <button id="btn-update" type="button">Modificar</button>
+                <button id="btn-cancel-update" type="button">Cancelar</button>                
+            </div>
+        </dialog>  
         <div class="usuarios">
             <table id="tb-usuarios"></table>
             <p id="p-error"></p>
         </div>
     </main>
+  
     <footer>
         <address>
             Alejandro Cerezo
         </address>
-    </footer>   
+    </footer> 
+    
+
 </body>
 </html>
