@@ -1,10 +1,14 @@
 import { USERS } from './api.js'
+import dialogPolyfill from '../node_modules/dialog-polyfill/index.js';
 
 export function app() {
     console.log('Cargada app')
     let aUsers = []
     let userActual = {} 
-    getDatos()
+    let cabecera = new Headers({
+        'Content-Type': 'application/json'
+    })
+    getDatosAwait()
 
     // Nodos del DOM
     let aInputs = document.querySelectorAll('input')
@@ -12,8 +16,10 @@ export function app() {
     let tbUsuarios = document.querySelector('#tb-usuarios')
     let aBtnEditar = [] // Toman valor tras renderizar la tabla
     let aBtnBorrar = [] // Toman valor tras renderizar la tabla
-    let dlgBorrar = document.querySelector('#dlg-borrar') 
-    let dlgEditar = document.querySelector('#dlg-editar') 
+    let dlgBorrar = document.querySelector('#dlg-borrar')
+    dialogPolyfill.registerDialog(dlgBorrar); 
+    let dlgEditar = document.querySelector('#dlg-editar')
+    dialogPolyfill.registerDialog(dlgEditar);  
 
     let nodosBorrar = {
         nombre: document.querySelector('#out-nombre-editar'),
@@ -42,9 +48,6 @@ export function app() {
             edad: aInputs[1].value
         }
         console.log(oUser)
-        let cabecera = new Headers({
-            'Content-Type':  'application/json'
-        })
         fetch(USERS, {
             method: 'POST',
             headers: cabecera, 
@@ -65,6 +68,7 @@ export function app() {
             id = ev.target.parentElement.dataset.id
         }
         userActual = aUsers.find(item => item.id == id)
+        console.log(userActual)
         if (ev.target.classList.contains('btn-editar') || 
             ev.target.parentElement.classList.contains('btn-editar') ) {
             setEditarModal()
@@ -87,14 +91,32 @@ export function app() {
 
     function onDlgBorrar(ev) {
         if(ev.target.id == 'btn-borrar') {
-            // Borrar
+            let url = USERS + '/' + userActual.id
+            fetch(url, {method: 'DELETE'})
+            .then( response => response.json() )
+            .then ( () => getDatosAwait() )
         }
         dlgBorrar.close()
     }
 
     function onDlgEditar(ev) {
         if(ev.target.id == 'btn-update') {
-            // Actualizar
+            // Actualizar PUT / PATCH
+            let oUser = {
+                nombre: nodosEditar.nombre.value,
+                edad: nodosEditar.edad.value
+            }
+            let url = USERS + '/' + userActual.id
+            fetch(url, {
+                method: 'PUT',
+                headers: cabecera, 
+                body: JSON.stringify(oUser) })
+            .then( response => response.json())
+            .then( data => {
+                console.log(data)
+                getDatosAwait()
+            })
+            
         }
         dlgEditar.close()
     }
@@ -108,6 +130,12 @@ export function app() {
             aUsers = data
             renderData()
         })
+    }
+    
+    async function getDatosAwait() {
+        let response = await fetch(USERS)
+        aUsers = await response.json()
+        renderData()
     }
 
     function renderData() {

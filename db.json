@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "id": 1,
-      "nombre": "Pepe",
-      "edad": 33
+      "nombre": "Jose",
+      "edad": "33",
+      "id": 1
     },
     {
       "id": 2,
@@ -11,14 +11,9 @@
       "edad": 34
     },
     {
-      "id": 3,
-      "nombre": "Elena",
-      "edad": 42
-    },
-    {
-      "nombre": "Luis",
-      "edad": "25",
-      "id": 4
+      "nombre": "Helena",
+      "edad": "42",
+      "id": 3
     },
     {
       "nombre": "Rosa",
@@ -29,11 +24,6 @@
       "nombre": "Carlos",
       "edad": "63",
       "id": 6
-    },
-    {
-      "nombre": "Jesus",
-      "edad": "54",
-      "id": 7
     },
     {
       "nombre": "Isabel",
