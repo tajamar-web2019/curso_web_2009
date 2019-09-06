@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS en la Web</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./favicon.ico">
+    <link rel="import" href="./components/pais.tmp.html">
+    <script src="./js/bootstrap.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <h1>Paises y continentes</h1>
+    </header>
+    <main>
+        <div>
+            <label for="continentes" class="form_label">
+                Selecciona un continente</label>
+            <select name="continentes" id="continentes" 
+                class="form_control"> 
+            </select>
+        </div>
+        <div hidden>
+            <label for="paises" class="form_label" >
+                Selecciona un país</label>
+            <select name="paises" id="paises" 
+                class="form_control">
+            </select>
+        </div>
+        <div class="datosPais">
+            <app-pais></app-pais>
+        </div>
+    </main>
+    <footer>
+        <address>
+            Alejandro Cerezo
+        </address>
+    </footer>
+</body>
+</html>

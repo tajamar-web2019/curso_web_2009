@@ -1,0 +1,64 @@
+<template id='pais'>
+    <style>
+        :host {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 1rem 0rem;
+            background-color: bisque;
+            border: 1px solid brown;            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;            
+        }
+        div {
+            width: 40%;
+            padding: 1rem 2rem;
+        }
+        div.mapa {
+            width: 100%;
+        }
+        img {
+            max-width: 100%;;
+        }
+        .capital {
+            padding: 0.2rem;
+            background-color: brown;
+            color: bisque;
+            margin-bottom: 0.3rem;
+        }
+        .subregion {
+            font-style: italic;
+        }
+        .separador {
+            list-style-type: none;
+            border: 1px solid;
+            margin: 1rem 0;
+        }
+    </style>
+
+    <div class="flag-wrapper">
+        <img id='flag' src="" alt="bandera">
+    </div>
+    <div class="data">        
+        <ul>
+            <li class="capital">Capital: <span id="sp-capital"></span></li>
+            <li class="subregion">Subregion: <span id="sp-subregion"></span></li>
+            <li class="separador"></li>
+            <li>Latitud: <span id="sp-latlng"></span></li>
+            <li>Longitud: <span id="sp-latlng"></span></li> 
+            <li class="separador"></li>
+            <li>Poblacion: <span id="sp-population"></span></li>
+            <li>Superficie: <span id="sp-area"></span></li>
+            <li>Fronteras: <span id="sp-borders"></span></li>             
+            <li class="separador"></li>
+            <li>Código numérico: <span id="sp-numericCode"></span></li>
+            <li>Código telefónico: <span id="sp-callingCodes"></span></li>
+            <li class="separador"></li>            
+            <li>Moneda: <span id="sp-currencies"></span></li>
+            <li>Idioma: <span id="sp-languages"></span></li>
+        <ul>
+    </div>
+    <div class="mapa"></div>
+</template>
+<script src="./pais.tmp.js"></script>
