@@ -1,0 +1,107 @@
+// esto es un comentario
+    esto sigue siendo cometario
+
+//- esto es un comentario solo para pug
+    más comentario
+
+-const page = 1
+-const titulo  = 'Hola Pug'
+-const charset = 'utf-8'
+-const empresa = 'Colegio <b>Tajamar</b>'
+-const aPaises = [{nombre: 'España', id: 'es', description: 'Bla bla bla'}, {nombre: 'Francia', id: 'fr', description: 'Ble ble ble'}, {nombre: 'Italia', id: 'it', description: 'Bli bli bli'}]
+-const aMenu = [ {nombre: 'Inicio' , id: 'inicio', description: 'Bla bla bla'}, {nombre: 'Clientes', id: 'clientes', description: 'Bla bla bla'}, {nombre: 'Porfolio', id: 'porfolio', description: 'Bla bla bla'}, {nombre: 'Partners', id: 'partners', description: 'Bla bla bla'}, {nombre: 'Aceca de', id: 'acerca', description: 'Bla bla bla'}] 
+-const aMenuP = [{nombre: 'Páginas Web' , id: 'web', description: 'Bla bla bla'}, {nombre: 'Mobile Apps' , id: 'apps', description: 'Bla bla bla'}, {nombre: 'UX / UI' , id: 'ux', description: 'Bla bla bla'}]
+
+- let x = 5
+- x = x*x
+
+
+// Mixin
+mixin itemMenu(item)
+    li
+        a(href="#"+item.id.toLowerCase() title=item.description) #{item.nombre}
+
+mixin inputGroup(inputName)
+    .form-group
+        label(for=inputName.toLowerCase()) #{inputName}
+        block
+        p.error(hidden) Aquí irán los errores
+        
+
+doctype
+html(lang=language)
+    head
+        meta(charset=charset)
+        title #{titulo} 
+        link(rel="stylesheet", href="./css/style.css")
+    body
+        // Comentario
+        header#main-header.main-header
+            //- -if (page == 1) {
+            //- h1= titulo
+            //- -} else {
+            //- h1 #{titulo} - Continuación
+            //- -}    
+            if (page == 1)
+                h1= titulo
+            else
+                h1 #{titulo} - Continuación
+            nav.main-menu
+                ul
+                    each item in aMenu
+                        +itemMenu(item)
+        main
+            section#inicio
+                header
+                    h2 Inicio
+                p. 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Dolor, <strong>quas mollitia</strong>, odio laboriosam dolorem aliquid quod 
+                    fugiat repudiandae eum veritatis sed quo dolorum tempore nihil qui delectus quidem accusamus ab.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos impedit animi, sed distinctio cupiditate iure nesciunt aliquam illo iste quis quos aut voluptas magni corrupti sunt, at, rerum sapiente 
+                    b laborum!
+                div.info Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt omnis illo reprehenderit nam deleniti excepturi, eaque corrupti iure, tempore incidunt, animi suscipit exercitationem! Eos sint voluptas impedit beatae, quos et!
+                figure
+                    img(src="https://via.placeholder.com/500x350/" alt="Image placeholder")
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo facilis dolor distinctio, itaque quo in aliquid iure reiciendis at? Nisi expedita quibusdam iusto cupiditate ad aut ipsam ab magni porro?
+        section#clientes
+            header
+                h2 Clientes
+            p Seleccione el arré geográfica    
+            form(action="")
+                select(name="pais")
+                    //- -for (i = 0; i < aPaises.length; i++) {
+                    //- -let item = aPaises[i]
+                    //- option(value=item.id title=item.description) #{item.nombre}
+                    //- -}
+                    each item in aPaises
+                        option(value=item.id title=item.description) #{item.nombre}
+        section#porfolio
+            header
+                h2 Profolio
+                nav
+                    ul
+                        each item in aMenuP
+                            +itemMenu(item)
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo illum dicta perspiciatis ipsam ullam sequi optio dolore tempore quam illo fugit molestias id suscipit, ipsum nesciunt iure consequatur? Tenetur, et.
+            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea obcaecati veniam laboriosam asperiores harum fugit nemo iusto ex qui sit quidem, doloremque soluta, accusamus, aspernatur veritatis eum repellendus sequi aut!
+        section(id=aMenu[4].id)
+            header
+                h2= aMenu[4].nombre
+                p= aMenu[4].description
+            h3 Formulario de contactos
+            form(action="")
+                +inputGroup('Nombre')
+                    input(type="text", name="nombre")
+                +inputGroup('Email')
+                    input(type="email", name="email")
+                +inputGroup('Password')
+                    input(type="password", name="password")
+                +inputGroup('Comentarios')
+                    textarea(name="comentarios", cols="30", rows="10")
+                    
+
+        footer(class="main-footer")
+            address &copy; #{autor}
+            div
+                small!= empresa 

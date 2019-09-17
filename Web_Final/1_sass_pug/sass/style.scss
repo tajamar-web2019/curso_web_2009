@@ -1,0 +1,113 @@
+/* Esto es un comentario CSS */
+
+// Esto es un comentario de SASS 
+// No se compilan a CSS
+
+$color-principal: bisque; 
+$color-fondo:  brown;
+$margen-base: 1rem;
+
+@mixin sin_mvert {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@mixin colores_invertidos($oscuro:20, $claro: 20){
+    background-color: darken($color: $color-principal, $amount: $oscuro);
+    color: lighten($color: $color-fondo, $amount: $claro );
+}
+
+body {
+    margin: ($margen-base + $margen-base)/2 - $margen-base;
+    display: grid;
+    grid-template-rows: 2fr auto auto 1fr;
+}
+
+.main {
+    background-color: $color-fondo;
+    color: $color-principal;
+    display: flex;
+}
+
+.main-header {
+    @extend .main;
+    justify-content: center;
+    text-align: center;  
+    h1 {
+        @include sin_mvert();
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+main {
+    min-height: 60vh;
+}
+
+section.intro {
+    margin: 2.6rem;
+    header {
+        @include colores_invertidos()
+    }   
+    article {
+        div {
+            div  {
+                p {color : darkblue}
+            }
+        }
+        aside {
+            div {
+                color: aqua;
+            }
+        }
+    } 
+}
+
+section.samples {
+    margin: 2.6rem;
+    header {
+        @include colores_invertidos(50, 50)
+    }
+
+}
+
+@import './_parrafo.scss';
+
+.main-footer {
+    @extend .main;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }    
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        padding: 1rem;
+    }    
+}
+
+.form-group {
+    padding: 1rem;
+}
+
+.form-group label,
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    border: none;
+    border-bottom: 1px solid rgba(169, 169, 169, 0.65)
+}

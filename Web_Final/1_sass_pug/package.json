@@ -1,0 +1,20 @@
+{
+  "name": "26_sass",
+  "version": "1.0.0",
+  "description": "Ejemplos del uso de SASS",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass sass/:css/ --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass sass/:css/ --watch --no-source-map",
+    "pug": "pug -w -P -p ./pug/partials -O ./pug/options.json ./pug/templates -o ./"
+  },
+  "keywords": [],
+  "author": "Alejandro Cerezo",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.22.12",
+    "pug": "^2.0.3"
+  }
+}
