@@ -7,13 +7,13 @@ esto sigue siendo cometario
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Hola Pug con Sass </title>
+    <title>Hola Pug </title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <!-- Comentario-->
     <header class="main-header" id="main-header">
-      <h1>Hola Pug con Sass</h1>
+      <h1>Hola Pug</h1>
       <nav class="main-menu">
         <ul>
           <li><a href="#inicio" title="Bla bla bla">Inicio</a></li>

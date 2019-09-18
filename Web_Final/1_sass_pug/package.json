@@ -6,15 +6,17 @@
   "scripts": {
     "start": "sass sass/:css/ --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass sass/:css/ --watch --no-source-map",
-    "pug": "pug -w -P -p ./pug/partials -O ./pug/options.json ./pug/templates -o ./"
+    "sass:w": "sass sass/:css/ --watch --no-source-map",
+    "pug:w": "pug -w -P -p ./pug/partials -O ./pug/options.json ./pug/templates -o ./",
+    "pug:sass": "parallelshell \"npm run pug:w\" \"npm run sass:w\""
   },
   "keywords": [],
   "author": "Alejandro Cerezo",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "pug": "^2.0.3",
     "sass": "^1.22.12",
-    "pug": "^2.0.3"
+    "parallelshell": "3.0.1"
   }
 }
