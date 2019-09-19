@@ -30,5 +30,7 @@
     "normalize.css": "^8.0.1",
     "popper.js": "^1.15.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack-cli": "^3.3.9"
+  }
 }
